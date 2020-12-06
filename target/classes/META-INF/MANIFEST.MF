@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: slowyy
+Build-Jdk: 14.0.1
+Implementation-Title: quanlybanhang
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.quanlybanhang
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/quanlybanhang
+Created-By: Maven Integration for Eclipse
+

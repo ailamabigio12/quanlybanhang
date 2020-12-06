@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Danh sách bài viết</title>
+		<th:block th:insert="~{admin/common/link :: link}"></th:block>
+ 
+		<th:block th:insert="~{admin/common/link :: script}"></th:block>
+	</head>
+	<body>
+		<div th:insert="~{admin/common/header :: header}"></div>
+		<div class="main-content main-container" id="main-container">
+			<div th:insert="~{admin/common/menu :: menu}"></div>	
+			<div class="main-content-inner">
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try {
+							ace.settings.check('breadcrumbs', 'fixed')
+						} catch (e) {
+						}
+					</script>
+		
+					<ul class="breadcrumb">
+						<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Home</a>
+						</li>
+		
+						<li><a href="#">Forms</a></li>
+						<li class="active">Form Elements</li>
+					</ul>
+					<!-- /.breadcrumb -->
+				</div>
+				<div class="page-content">
+					<div class="row">
+						<div class="col-xs-12">
+							<form th:if="${param.id}" th:action="@{/admin/tin-tuc?id={id}(id = ${param.id})}" th:object="${addnews}" th:method="PUT" enctype="multipart/form-data">								
+								<ul class="list-group">
+								  <li class="list-group-item">Tên bài viết: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{title}"/></span></li>
+								  <li class="list-group-item">Ảnh thumb: <span><input type="file" path="file" cssClass="col-xs-10 col-sm-5" name="file"/></span></li>
+								  <li class="list-group-item">Mô tả ngắn: <span><textarea path="shortDescription" rows="5" cols="10" cssClass="form-control" id="shortDescription" th:field="*{shortDescription}"/></span></li>
+								  <li class="list-group-item">Nội dung: <span><textarea path="content" rows="5" cols="10" cssClass="form-control" id="content" th:field="*{content}"/></span></li>
+								</ul>								
+								<div class="clearfix form-actions">
+									<div class="col-md-offset-3 col-md-9">													
+										<button class="btn btn-info" type="submit" id="btnAddOrUpdateNew">
+											<i class="ace-icon fa fa-check bigger-110"></i>
+											Cập nhật bài viết
+										</button>															
+									</div>											
+								</div>
+							</form>
+							<form th:unless="${param.id}" th:action="@{/admin/tin-tuc}" th:object="${addnews}" method="POST" enctype="multipart/form-data">								
+								<ul class="list-group">
+								  <li class="list-group-item">Tên bài viết: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{title}"/></span></li>
+								  <li class="list-group-item">Ảnh thumb: <span><input type="file" path="file" cssClass="col-xs-10 col-sm-5" name="file"/></span></li>
+								  <li class="list-group-item">Mô tả ngắn: <span><textarea path="shortDescription" rows="5" cols="10" cssClass="form-control" id="shortDescription" th:field="*{shortDescription}"/></span></li>
+								  <li class="list-group-item">Nội dung: <span><textarea path="content" rows="5" cols="30" cssClass="form-control" id="content" th:field="*{content}"/></span></li>
+								</ul>								
+								<div class="clearfix form-actions">	
+									<div class="col-md-offset-3 col-md-9">													
+										<button class="btn btn-info" type="submit" id="btnAddOrUpdateNew">
+											<i class="ace-icon fa fa-check bigger-110"></i>
+											Thêm bài viết
+										</button>															
+									</div>		
+								</div>
+							</form>												
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<th:block th:insert="~{admin/common/script :: script}"></th:block>
+	</body>
+	</html>

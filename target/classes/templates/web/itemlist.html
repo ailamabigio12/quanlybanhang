@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Danh sách sản phẩm</title>
+    <th:block th:insert="~{web/common/link :: link}"></th:block>
+    <style>
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #2a8bcb;
+            text-decoration: none;
+        }
+    </style>
+    <th:block th:insert="~{web/common/link :: script}"></th:block>
+</head>
+<body>
+<div th:insert="~{web/common/header :: header}"></div>
+    <form th:action="@{/danh-sach-san-pham}" id="formSubmit" method="get">
+        <ul th:each="item : ${itemlist}" class="homeproduct item2020">
+            <li data-id="229056" style="list-style: none; float: left; padding-left: 35px; padding-top: 80px;">
+                <div style="width: 180px; height: 220px; ">
+                    <a th:href="@{/san-pham?id={id}&infoid={info}(id = ${item.getId()}, info = ${item.getInfoId()})}" class=" vertion2020 large" data-s="0">
+                        <div class="heightlabel">
+                        </div>
+                        <img width="180" height="180" th:src="@{~/images/{thumb}(thumb = ${item.getThumbnail()})}"/>
+                        <h3 th:text="${item.getName()}"></h3>
+                        <div class="props">
+                        </div>
+                        <div class="price">
+                            <strong th:if="${item.getSalePrice()}" th:text="${item.getSalePrice()} + 'đ'"></strong>
+                            <strong th:unless="${item.getSalePrice()}" th:text="${item.getBasePrice() + 'đ'}"></strong>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </form>
+
+    <th:block th:insert="~{web/common/script :: script}"></th:block>
+</body>
+</html>

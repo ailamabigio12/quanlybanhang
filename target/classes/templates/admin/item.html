@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Danh sách bài viết</title>
+    <th:block th:insert="~{admin/common/link :: link}"></th:block>
+
+    <th:block th:insert="~{admin/common/link :: script}"></th:block>
+</head>
+<body>
+<div th:insert="~{admin/common/header :: header}"></div>
+<div class="main-content main-container" id="main-container">
+    <div th:insert="~{admin/common/menu :: menu}"></div>
+    <div class="main-content-inner">
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+
+            <ul class="breadcrumb">
+                <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Home</a>
+                </li>
+
+                <li><a href="#">Forms</a></li>
+                <li class="active">Form Elements</li>
+            </ul>
+            <!-- /.breadcrumb -->
+        </div>
+        <div class="page-content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form th:if="${param.itemid}" th:action="@{/admin/san-pham?itemid={id}(id = ${param.itemid})}" th:method="PUT" th:object="${additem}" enctype="multipart/form-data">
+                        <ul class="list-group" style="width: 50%; float: left;">
+                            <li class="list-group-item" style="border: none">Công ty sản xuất:
+                                <select th:field="*{companyId}">
+                                    <option th:each="comp : ${company}" th:value="${comp.getId()}" th:text="${comp.getName()}"></option>
+                                </select>
+                            </li>
+                            <li class="list-group-item" style="border: none">Tên sản phẩm: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{name}"/></span></li>
+                            <li class="list-group-item" style="border: none">Ảnh sản phẩm: <span><input type="file" path="file" cssClass="col-xs-10 col-sm-5" name="file"/></span></li>
+                            <li class="list-group-item" style="border: none">Giá gốc sản phẩm: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{basePrice}"/></span></li>
+                            <li class="list-group-item" style="border: none">Giá sale sản phẩm: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{salePrice}"/></span></li>
+                            <li class="list-group-item" style="border: none">Mô tả sản phẩm: <span><textarea path="content" rows="5" cols="30" cssClass="form-control" th:field="*{description}"/></span></li>
+                        </ul>
+                        <div>
+                            <div class="col-md-offset-3 col-md-9" style="background: white; margin-left: 45%">
+                                <button class="btn btn-info">
+                                    <i class="ace-icon fa fa-check bigger-110"></i>
+                                    Sửa thông tin sản phẩm
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <form th:unless="${param.itemid}" th:action="@{/admin/san-pham}" th:method="POST" enctype="multipart/form-data">
+                        <ul class="list-group" th:object="${additem}" style="width: 50%; float: left;">
+                            <li class="list-group-item" style="border: none">Công ty sản xuất:
+                                <select th:field="*{companyId}">
+                                    <option th:each="comp : ${company}" th:value="${comp.getId()}" th:text="${comp.getName()}"></option>
+                                </select>
+                            </li>
+                            <li class="list-group-item" style="border: none">Tên sản phẩm: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{name}"/></span></li>
+                            <li class="list-group-item" style="border: none">Ảnh sản phẩm: <span><input type="file" path="file" cssClass="col-xs-10 col-sm-5" name="file"/></span></li>
+                            <li class="list-group-item" style="border: none">Giá gốc sản phẩm: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{basePrice}"/></span></li>
+                            <li class="list-group-item" style="border: none">Giá sale sản phẩm: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{salePrice}"/></span></li>
+                            <li class="list-group-item" style="border: none">Mô tả sản phẩm: <span><textarea path="content" rows="5" cols="30" cssClass="form-control" th:field="*{description}"/></span></li>
+                        </ul>
+                        <ul class="list-group" th:object="${infoitem}" style="width: 50%; float: left;">
+                            <li class="list-group-item" style="border: none">Công ty sản xuất: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{company}"/></span></li>
+                            <li class="list-group-item" style="border: none">Cân nặng sản phẩm: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{weight}"/></span></li>
+                            <li class="list-group-item" style="border: none">Rom: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{romPhone}"/></span></li>
+                            <li class="list-group-item" style="border: none">Ram: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{ramPhone}"/></span></li>
+                            <li class="list-group-item" style="border: none">Kích thước màn hình: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{screenSize}"/></span></li>
+                            <li class="list-group-item" style="border: none">Phiên bản hệ điều hành: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{systemVersion}"/></span></li>
+                            <li class="list-group-item" style="border: none">Chip xử lý: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{chipset}"/></span></li>
+                            <li class="list-group-item" style="border: none">Dung lượng pin: <span><input type="text" path="title" cssClass="col-xs-10 col-sm-5" th:field="*{pinPhone}"/></span></li>
+                        </ul>
+                        <div>
+                            <div class="col-md-offset-3 col-md-9" style="background: white; margin-left: 45%">
+                                <button class="btn btn-info">
+                                    <i class="ace-icon fa fa-check bigger-110"></i>
+                                    Thêm sản phẩm
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:insert="~{admin/common/script :: script}"></th:block>
+</body>
+</html>
