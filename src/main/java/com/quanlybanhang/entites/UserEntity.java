@@ -1,5 +1,7 @@
 package com.quanlybanhang.entites;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,6 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
+@Data
 @Table(name = "user")
 public class UserEntity extends BaseEntity {
 
@@ -42,68 +45,4 @@ public class UserEntity extends BaseEntity {
 	@OneToOne
 	@JoinColumn(name = "roleid")
 	private RoleEntity role;
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getFullName() {
-		return fullName;
-	}
-
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	public Long getIdentityNumber() {
-		return identityNumber;
-	}
-
-	public void setIdentityNumber(Long identityNumber) {
-		this.identityNumber = identityNumber;
-	}
-
-	public Integer getCode() {
-		return code;
-	}
-
-	public void setCode(Integer code) {
-		this.code = code;
-	}
-
-	public RoleEntity getRole() {
-		return role;
-	}
-
-	public void setRole(RoleEntity role) {
-		this.role = role;
-	}
 }

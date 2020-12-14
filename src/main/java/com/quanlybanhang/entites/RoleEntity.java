@@ -1,11 +1,14 @@
 package com.quanlybanhang.entites;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
+@Data
 @Table(name = "role")
 public class RoleEntity extends BaseEntity {
 
@@ -17,28 +20,4 @@ public class RoleEntity extends BaseEntity {
 	
 	@OneToOne(mappedBy = "role")
 	private UserEntity user;
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public UserEntity getUser() {
-		return user;
-	}
-
-	public void setUser(UserEntity user) {
-		this.user = user;
-	}
 }

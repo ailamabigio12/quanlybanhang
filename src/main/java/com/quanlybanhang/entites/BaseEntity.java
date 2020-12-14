@@ -17,8 +17,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import lombok.Data;
 
-@Data
 @MappedSuperclass
+@Data
 @EntityListeners(AuditingEntityListener.class)
 public class BaseEntity {
 	

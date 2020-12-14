@@ -5,8 +5,8 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "type")
 @Data
+@Table(name = "type")
 public class InfoEntity extends BaseEntity {
 	
 	@Column(name = "company", length = 20)

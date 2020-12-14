@@ -23,5 +23,5 @@ public class NewsEntity extends BaseEntity {
 	
 	@Column(name = "content", columnDefinition = "TEXT")
 	private String content;
-	
+
 }
