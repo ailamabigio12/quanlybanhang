@@ -1,6 +1,7 @@
 package com.quanlybanhang.service.impl;
 
 import com.quanlybanhang.converter.ItemConverter;
+import com.quanlybanhang.dto.InfoDTO;
 import com.quanlybanhang.dto.ItemDTO;
 import com.quanlybanhang.entites.CompanyEntity;
 import com.quanlybanhang.entites.InfoEntity;
@@ -55,22 +56,25 @@ public class ItemService implements IItemService {
     }
 
     @Override
-    public ItemDTO save(MultipartFile file, ItemDTO itemDTO) {
+    public ItemDTO save(MultipartFile file, ItemDTO itemDTO, InfoDTO infoDTO) {
         try {
             String filename = System.currentTimeMillis() + "_" + file.getOriginalFilename();
             String rootPath = CommonConstant.root;
             Path pathfiles = Paths.get(rootPath + filename);
             CompanyEntity company = companyRepository.findOneById(itemDTO.getCompanyId());
+            InfoEntity info = infoRepository.findOneById(infoDTO.getId());
             ItemEntity itemEntity = new ItemEntity();
             if (itemDTO.getId() != null) {
                 ItemEntity oldItem = itemRepository.findOneById(itemDTO.getId());
                 oldItem.setCompany(company);
                 oldItem.setCode(1);
+                oldItem.setInfo(info);
                 itemEntity = itemConverter.toEntity(itemDTO, oldItem);
             } else {
                 itemEntity = itemConverter.toEntity(itemDTO);
                 itemEntity.setCompany(company);
                 itemEntity.setCode(1);
+                itemEntity.setInfo(info);
             }
             if (filename.charAt(filename.length()-1) != '_') {
                 itemEntity.setThumbnail(filename);

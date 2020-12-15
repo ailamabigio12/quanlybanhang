@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface InfoRepository extends JpaRepository<InfoEntity, Long> {
 
-    public InfoEntity findOneById(Long id);
+    InfoEntity findOneById(Long id);
 }

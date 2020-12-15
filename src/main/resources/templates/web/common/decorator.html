@@ -25,51 +25,33 @@
 
     <div class="row">
 
-        <form th:action="@{/tin-tuc?id={id}(id = ${param.id})}" th:object="${showNews}" method="get">
         <!-- Blog Entries Column -->
-            <div class="col-md-8">
+        <div class="col-md-8">
+
+            <form th:action="@{/san-pham?id={id}(id = ${param.id})}" th:object="${item}" method="get">
 
                 <!-- Title -->
-                <h1 class="my-4" th:text="*{title}"></h1>
-
-                <!-- Author -->
-                <p class="lead">
-                    by
-                    <a href="#">Start Bootstrap</a>
-                </p>
-
-                <hr>
-
-                <!-- Date/Time -->
-                <p>Posted on January 1, 2019 at 12:00 PM</p>
-
-                <hr>
+                <h1 class="my-4" th:text="*{name}"></h1>
 
                 <!-- Preview Image -->
                 <img class="img-fluid rounded" th:src="@{images/{thumb}(thumb = *{thumbnail})}" alt="">
 
                 <hr>
 
+                <div th:if="*{salePrice}"><h4><del style="color: red; text-decoration-color: black" th:text="*{basePrice} + 'đ'"></del></h4> <h3 th:text="*{salePrice} + 'đ'"></h3></div>
+                <div th:unless="*{salePrice}"><h3 style="color: red;" th:text="*{salePrice} + 'đ'"></h3></div>
+
+                <hr>
+
                 <!-- Post Content -->
-                <p th:text="*{content}"></p>
-            </div>
-        </form>
+                <p th:text="*{description}"></p>
+
+            </form>
+
+        </div>
 
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
-
-            <!-- Search Widget -->
-            <div class="card my-4">
-                <h5 class="card-header">Search</h5>
-                <div class="card-body">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for...">
-                        <span class="input-group-append">
-                    <button class="btn btn-secondary" type="button">Go!</button>
-                  </span>
-                    </div>
-                </div>
-            </div>
 
             <!-- Categories Widget -->
             <div class="card my-4">
@@ -108,10 +90,49 @@
 
             <!-- Side Widget -->
             <div class="card my-4">
-                <h5 class="card-header">Side Widget</h5>
-                <div class="card-body">
-                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-                </div>
+                <form th:action="@{/san-pham?id={id}(id = ${param.id})}" th:object="${info}" method="get">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th rowspan="2">Thông số kĩ thuật</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Hãng sản xuất:</td>
+                            <td th:text="*{company}"></td>
+                        </tr>
+                        <tr>
+                            <td>Kích thước màn hình:</td>
+                            <td th:text="*{screenSize} + 'inch'"></td>
+                        </tr>
+                        <tr>
+                            <td>Hệ điều hành:</td>
+                            <td th:text="*{systemVersion}"></td>
+                        </tr>
+                        <tr>
+                            <td>Chip xử lý:</td>
+                            <td th:text="*{chipset}"></td>
+                        </tr>
+                        <tr>
+                            <td>Bộ nhớ trong:</td>
+                            <td th:text="*{romPhone}"></td>
+                        </tr>
+                        <tr>
+                            <td>Ram:</td>
+                            <td th:text="*{ramPhone}"></td>
+                        </tr>
+                        <tr>
+                            <td>Cân nặng(g):</td>
+                            <td th:text="*{weight}"></td>
+                        </tr>
+                        <tr>
+                            <td>Dung lượng pin(mAh):</td>
+                            <td th:text="*{pinPhone}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
             </div>
 
         </div>

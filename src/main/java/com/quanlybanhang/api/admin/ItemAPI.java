@@ -61,16 +61,18 @@ public class ItemAPI {
                               @ModelAttribute ItemDTO itemDTO,
                               @ModelAttribute InfoDTO infoDTO) {
             InfoDTO infopost = infoService.save(infoDTO);
-            itemService.save(file, itemDTO);
+            itemService.save(file, itemDTO, infopost);
             return "redirect:/admin/danh-sach-san-pham";
     }
 
     @PutMapping(value = "/admin/san-pham")
         public String updateItem(@RequestParam(value = "itemid") Long id,
                                  @RequestParam(value = "file", required = false) MultipartFile file,
-                                 @ModelAttribute ItemDTO itemDTO) {
+                                 @ModelAttribute ItemDTO itemDTO,
+                                 @ModelAttribute InfoDTO infoDTO) {
+            InfoDTO infoput = infoService.save(infoDTO);
             itemDTO.setId(id);
-            itemService.save(file, itemDTO);
+            itemService.save(file, itemDTO, infoput);
             return "redirect:/admin/danh-sach-san-pham";
     }
 }

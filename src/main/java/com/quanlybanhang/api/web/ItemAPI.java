@@ -27,6 +27,7 @@ public class ItemAPI {
     public String showItem(Model model, @RequestParam(value = "id") Long id,
                            @RequestParam(value = "infoid") Long infoId) {
         model.addAttribute("item", itemService.findById(id));
+        System.out.println(infoId);
         model.addAttribute("info", infoService.findById(infoId));
         return "web/item";
     }
