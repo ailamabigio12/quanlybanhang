@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05dbde28-77a0-4730-b9c0-da19c963bc2e" name="Default Changelist" comment="" />
+    <list default="true" id="05dbde28-77a0-4730-b9c0-da19c963bc2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/web/css/blog-home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/common/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/common/link.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/common/link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/itemlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/itemlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/newslist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/newslist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/HomeAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/HomeAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/ItemAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/ItemAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/NewsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/NewsAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/HomeAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/HomeAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/NewsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/NewsAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/CompanyConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/CompanyConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/InfoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/InfoConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/ItemConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/ItemConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/NewsConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/NewsConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/AbstractDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/AbstractDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO$CommentDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO$CommentDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO$CompanyDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO$CompanyDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO$InfoDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO$InfoDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO$ItemDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO$ItemDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO$NewsDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO$NewsDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO$OrderDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO$OrderDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/CompanyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/CompanyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/InfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/InfoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/ItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/NewsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/NewsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/ICompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/ICompanyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/INewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/INewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/CompanyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/InfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/InfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/ItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/NewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/utils/CommonConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/utils/CommonConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/common/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/common/link.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/common/link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/itemlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/itemlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/newslist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/newslist.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,65 +97,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/common/decorator.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/link.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="144">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/newslist.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+            <state relative-caret-position="480">
+              <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/item.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/css/blog-home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="76" column="46" lean-forward="true" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#3;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#5;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/news.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1396">
-              <caret line="113" column="7" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/common/menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/itemlist.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2370">
-              <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
+            <state relative-caret-position="72">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -147,7 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/ICompanyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/CompanyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/repository/ItemRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/IInfoService.java" />
@@ -198,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/common/decorator.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/news.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/common/menu.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/css/blog-home.css" />
       </list>
     </option>
   </component>
@@ -219,7 +233,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
@@ -350,7 +364,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="quanlybanhang" type="b2602c69:ProjectViewProjectNode" />
@@ -359,7 +373,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -386,7 +400,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlybanhang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlybanhang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -406,7 +429,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/web/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -422,15 +445,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/web/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/admin" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/web" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/webapp" />
       <recent name="$PROJECT_DIR$/src/main/resources/public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/admin" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -480,6 +504,7 @@
       <workItem from="1607336591523" duration="9631000" />
       <workItem from="1607915328913" duration="399000" />
       <workItem from="1607916022969" duration="7256000" />
+      <workItem from="1608019840464" duration="403000" />
     </task>
     <task id="LOCAL-00001" summary="done">
       <created>1607934382434</created>
@@ -499,13 +524,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78168000" />
+    <option name="totallyTimeSpent" value="78571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17891374" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18051118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -549,20 +574,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/config/ThymeleafImgConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/INewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -631,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/link.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/css/list-style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -682,13 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="73" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -909,45 +906,38 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/assets/js/forms.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/newslist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/common/decorator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/itemlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/common/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        <state relative-caret-position="840">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1396">
+        <state relative-caret-position="2712">
           <caret line="113" column="7" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/common/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/itemlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3312">
+          <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/item.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="76" column="46" lean-forward="true" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+        <state relative-caret-position="132">
+          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -957,7 +947,43 @@
             <element signature="n#style#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#5;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#form#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/newslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/link.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/css/blog-home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="6" />
         </state>
       </provider>
     </entry>

@@ -1,44 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Danh sách bài viết</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quốc Đạt Mobile</title>
+
     <th:block th:insert="~{web/common/link :: link}"></th:block>
-    <style>
-        a {
-            color: #000000;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #2a8bcb;
-            text-decoration: none;
-        }
-    </style>
+
     <th:block th:insert="~{web/common/link :: script}"></th:block>
+
 </head>
-<body>
-    <div th:insert="~{web/common/header :: header}"></div>
-    <form th:action="@{/danh-sach-tin-tuc}" id="formSubmit" method="get">
-        <div class="container">
-            <div th:each="news : ${newslist}">
-                <a class="news-link" th:href="@{/tin-tuc?id={id}(id = ${news.getId()})}">
-                    <table style="border-bottom: 1px solid black; width: 70%; margin-left: 15%;"
-                           class="d-flex justify-content-center bg-secondary mb-3">
-                        <tr>
-                            <th style="font-size: large" th:text="${news.getTitle()}"></th>
-                        </tr>
-                        <tr>
-                            <td><img th:src="@{~/images/{thumb}(thumb = ${news.getThumbnail()})}" width=100% height="300"></td>
-                        </tr>
-                        <tr>
-                            <td th:text="${news.getShortDescription()}"></td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
+
+<body class="padd">
+
+<div th:insert="~{web/common/header :: header}"></div>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <h1 class="my-4">Page Heading
+                <small>Secondary Text</small>
+            </h1>
+
+            <!-- Blog Post -->
+            <form th:action="@{/danh-sach-tin-tuc}" id="formSubmit" method="get">
+                <div class="card mb-4" th:each="news : ${newslist}">
+                    <img class="card-img-top" th:src="@{~/images/{thumb}(thumb = ${news.getThumbnail()})}" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title" th:text="${news.getTitle()}"></h2>
+                        <p class="card-text" th:text="${news.getShortDescription()}"></p>
+                        <a th:href="@{/tin-tuc?id={id}(id = ${news.getId()})}" class="btn btn-primary">Đọc tiếp &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on January 1, 2020 by
+                        <a href="#">Start Bootstrap</a>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item">
+                    <a class="page-link" href="#">&larr; Older</a>
+                </li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">Newer &rarr;</a>
+                </li>
+            </ul>
+
         </div>
-    </form>
-    <th:block th:insert="~{web/common/script :: script}"></th:block>
+
+        <div class="col-md-4" th:insert="~{web/common/sidebar :: sidebar}"></div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<div th:insert="~{web/common/footer :: footer}"></div>
+
+<th:block th:insert="~{web/common/script :: script}"></th:block>
+
 </body>
+
 </html>
