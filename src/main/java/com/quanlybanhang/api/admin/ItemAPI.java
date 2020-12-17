@@ -38,7 +38,6 @@ public class ItemAPI {
     @PutMapping(value = "/admin/danh-sach-san-pham")
         public String deleteItem(@RequestParam(value = "itemid") Long id,
                                  @ModelAttribute ItemDTO itemDTO) {
-            System.out.println(id);
             itemService.setCodeZero(itemDTO);
             return "redirect:/admin/danh-sach-san-pham";
     }

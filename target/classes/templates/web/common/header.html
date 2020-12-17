@@ -7,29 +7,22 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="nav navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item text-muted active">
 					<a class="nav-link" href="#">Trang chủ
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Danh mục sản phẩm</a>
-					<ul class="dropdown-menu">
-						<li class="nav-item">
-							<a th:href="@{/danh-sach-tin-tuc}" class="nav-link">Samsung</a>
-						</li>
-						<li class="nav-item">
-							<a href="" class="nav-link">Oppo</a>
-						</li>
-						<li class="nav-item">
-							<a href="" class="nav-link">Sony</a>
-						</li>
-					</ul>
+				<li class="nav-item dropdown text-muted">
+					<a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Danh mục sản phẩm</a>
+					<div class="dropdown-menu bg-dark ml-auto">
+						<a th:href="@{/danh-sach-tin-tuc}" class="dropdown-item text-muted nav-link">Samsung</a>
+						<a th:href="@{/danh-sach-san-pham}" class="dropdown-item text-muted nav-link">Oppo</a>
+					</div>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item text-muted">
 					<a class="nav-link" href="#">Services</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item text-muted">
 					<a class="nav-link" href="#">Contact</a>
 				</li>
 			</ul>
