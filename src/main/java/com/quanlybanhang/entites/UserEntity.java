@@ -1,29 +1,23 @@
 package com.quanlybanhang.entites;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.Date;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 @Entity
 @Data
-@Table(name = "user")
+@NoArgsConstructor
+@Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = {"username", "email"}))
 public class UserEntity extends BaseEntity {
 
 	@Column(name = "username", length = 24, nullable = false)
 	private String userName;
 	
-	@Column(name = "password", length = 24, nullable = false)
+	@Column(name = "password", nullable = false)
 	private String password;
 	
 	@Column(name = "email", length = 40)
@@ -32,17 +26,25 @@ public class UserEntity extends BaseEntity {
 	@Column(name = "fullname", length = 50)
 	private String fullName;
 	
-	@Column(name = "dateofbirth")
-	private Date dateOfBirth;
-	
 	@Column(name = "identitynumber", length = 12, nullable = false)
 	private Long identityNumber;
 	
 //	code = 1 == acc có thể sử dụng. code = 0 == acc bị ẩn không thể sử dụng.
 	@Column(name = "code")
 	private Integer code;
-	
-	@OneToOne
-	@JoinColumn(name = "roleid")
-	private RoleEntity role;
+
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinTable(name = "users_roles",
+			   joinColumns = @JoinColumn(name = "userid", referencedColumnName = "id"),
+			   inverseJoinColumns = @JoinColumn(name = "roleid", referencedColumnName = "id"))
+	private Collection<RoleEntity> roles;
+
+	public UserEntity(String userName, String password, String email, String fullName, Long identityNumber, List<RoleEntity> roles) {
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.fullName = fullName;
+		this.identityNumber = identityNumber;
+		this.roles = roles;
+	}
 }

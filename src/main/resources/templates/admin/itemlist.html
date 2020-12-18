@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
 
@@ -35,6 +36,16 @@
             <!-- Begin Page Content -->
             <div class="main-content main-container" id="main-container">
                 <form th:action="@{admin/danh-sach-san-pham}" id="formSubmit" method="get">
+
+                    <!-- create message -->
+                    <div th:if="${param.csuccess}">
+                        <div class="alert alert-info">Thêm sản phẩm mới thành công!</div>
+                    </div>
+
+                    <!-- fix message -->
+                    <div th:if="${param.fsuccess}">
+                        <div class="alert alert-info">Thay đổi thông tin sản phẩm thành công!</div>
+                    </div>
 
                     <div class="main-content-inner">
                         <div class="breadcrumbs ace-save-state" id="breadcrumbs">

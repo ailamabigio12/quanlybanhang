@@ -31,7 +31,7 @@ public class NewsAPI {
 	@DeleteMapping(value = "/admin/danh-sach-tin-tuc")
 	public String deleteNews(@RequestBody Long id) {
 		newsService.delete(id);
-		return "redirect:/admin/danh-sach-tin-tuc";
+		return "redirect:/admin/danh-sach-tin-tuc?dsuccess";
 	}
 	
 	@GetMapping(value = "/admin/tin-tuc")
@@ -48,7 +48,7 @@ public class NewsAPI {
 	public String addNews(@RequestParam(value = "file", required = false) MultipartFile file,
 						  @ModelAttribute NewsDTO newsDTO) {
 		newsService.saveNews(file, newsDTO);
-		return "redirect:/admin/danh-sach-tin-tuc";
+		return "redirect:/admin/danh-sach-tin-tuc?csuccess";
 	}
 	
 	@PutMapping(value = "/admin/tin-tuc")
@@ -57,6 +57,6 @@ public class NewsAPI {
 							 @ModelAttribute NewsDTO newsDTO) {
 		newsDTO.setId(id);
 		newsService.saveNews(files, newsDTO);
-		return "redirect:/admin/danh-sach-tin-tuc";
+		return "redirect:/admin/danh-sach-tin-tuc?fsuccess";
 	}
 }

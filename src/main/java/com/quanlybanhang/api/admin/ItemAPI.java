@@ -39,7 +39,7 @@ public class ItemAPI {
         public String deleteItem(@RequestParam(value = "itemid") Long id,
                                  @ModelAttribute ItemDTO itemDTO) {
             itemService.setCodeZero(itemDTO);
-            return "redirect:/admin/danh-sach-san-pham";
+            return "redirect:/admin/danh-sach-san-pham?dsuccess";
     }
 
     @GetMapping(value = "/admin/san-pham")
@@ -61,7 +61,7 @@ public class ItemAPI {
                               @ModelAttribute InfoDTO infoDTO) {
             InfoDTO infopost = infoService.save(infoDTO);
             itemService.save(file, itemDTO, infopost);
-            return "redirect:/admin/danh-sach-san-pham";
+            return "redirect:/admin/danh-sach-san-pham?csuccess";
     }
 
     @PutMapping(value = "/admin/san-pham")
@@ -72,6 +72,6 @@ public class ItemAPI {
             InfoDTO infoput = infoService.save(infoDTO);
             itemDTO.setId(id);
             itemService.save(file, itemDTO, infoput);
-            return "redirect:/admin/danh-sach-san-pham";
+            return "redirect:/admin/danh-sach-san-pham?fsuccess";
     }
 }
