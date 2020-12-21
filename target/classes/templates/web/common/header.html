@@ -15,8 +15,7 @@
 				<li class="nav-item dropdown text-muted">
 					<a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Danh mục sản phẩm</a>
 					<div class="dropdown-menu bg-dark ml-auto">
-						<a th:href="@{/danh-sach-tin-tuc}" class="dropdown-item text-muted nav-link">Samsung</a>
-						<a th:href="@{/danh-sach-san-pham}" class="dropdown-item text-muted nav-link">Oppo</a>
+						<a th:each="company : ${companylist}" th:href="@{/danh-sach-san-pham?companyid={id}(id = ${company.getId()})}" th:value="${company.getId()}" th:text="${company.getName()}" class="dropdown-item text-muted nav-link"></a>
 					</div>
 				</li>
 				<li class="nav-item text-muted">

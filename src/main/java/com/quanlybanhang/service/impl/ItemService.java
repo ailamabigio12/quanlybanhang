@@ -87,6 +87,18 @@ public class ItemService implements IItemService {
     }
 
     @Override
+    public List<ItemDTO> findAllByCompanyId(Long id) {
+        List<ItemDTO> items = new ArrayList<>();
+        CompanyEntity company = companyRepository.findOneById(id);
+        List<ItemEntity> entities = itemRepository.findAllByCompany(company);
+        for (ItemEntity item:entities) {
+            ItemDTO itemDTO = itemConverter.toDTO(item);
+            items.add(itemDTO);
+        }
+        return items;
+    }
+
+    @Override
     public void setCodeZero(ItemDTO itemDTO) {
         ItemEntity itemEntity = itemConverter.toEntity(itemDTO);
         itemEntity.setCode(0);
