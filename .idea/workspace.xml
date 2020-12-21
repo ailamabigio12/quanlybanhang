@@ -2,60 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05dbde28-77a0-4730-b9c0-da19c963bc2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderItemEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quanlybanhang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/quanlybanhang.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/itemlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/itemlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.quanlybanhang/quanlybanhang/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.quanlybanhang/quanlybanhang/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/HomeAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/HomeAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/HomeAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/HomeAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/NewsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/NewsAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/CompanyConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/CompanyConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/InfoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/InfoConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/ItemConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/ItemConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/NewsConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/converter/NewsConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/AbstractDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/AbstractDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO$CommentDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO$CommentDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CommentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO$CompanyDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO$CompanyDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/CompanyDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO$InfoDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO$InfoDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/InfoDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO$ItemDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO$ItemDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/ItemDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO$NewsDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO$NewsDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/NewsDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO$OrderDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO$OrderDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/dto/OrderDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/BannerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/BannerEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/BaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/CommentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/CommentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/CompanyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/CompanyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/InfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/InfoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/ItemEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/ItemEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/NewsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/NewsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/OrderEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/OrderEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/RoleEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/RoleEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/entites/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/CompanyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/CompanyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/InfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/InfoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/ItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/NewsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/repository/NewsRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/ICompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/ICompanyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/IItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/INewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/INewsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/CompanyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/InfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/InfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/ItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/NewsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/utils/CommonConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/utils/CommonConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/ItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/ItemEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -103,15 +53,55 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/ItemEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="38" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderItemEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -144,9 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/ItemEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/NewsEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/CompanyEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/InfoEntity.java" />
@@ -195,6 +182,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/dto/OrderDTO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/web/itemlist.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/web/item.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/ItemEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderItemEntity.java" />
       </list>
     </option>
   </component>
@@ -223,10 +213,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="28" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1920" />
-    <option name="height" value="1172" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -238,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -409,7 +399,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -508,7 +497,8 @@
       <workItem from="1608019840464" duration="6152000" />
       <workItem from="1608094852189" duration="1789000" />
       <workItem from="1608171326376" duration="19859000" />
-      <workItem from="1608274014280" duration="3934000" />
+      <workItem from="1608274014280" duration="4205000" />
+      <workItem from="1608515682874" duration="1587000" />
     </task>
     <task id="LOCAL-00001" summary="done">
       <created>1607934382434</created>
@@ -528,12 +518,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109902000" />
+    <option name="totallyTimeSpent" value="111760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18530351" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18690096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -589,17 +580,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/FeedbackEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/config/ThymeleafImgConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/converter/InfoConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -840,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/utils/CommonConstant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -979,6 +952,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/ItemEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="38" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderItemEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

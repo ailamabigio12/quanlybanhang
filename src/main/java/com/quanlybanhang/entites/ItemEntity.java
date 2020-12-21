@@ -35,8 +35,8 @@ public class ItemEntity extends BaseEntity {
 	@JoinColumn(name = "infoid")
 	private InfoEntity info;
 	
-	@ManyToMany(mappedBy = "items")
-	private List<OrderEntity> orders = new ArrayList<>();
+	@OneToMany(mappedBy = "item")
+	private List<OrderItemEntity> orderitems = new ArrayList<>();
 	
 	@ManyToOne
 	@JoinColumn(name = "companyid")

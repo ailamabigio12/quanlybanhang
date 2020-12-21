@@ -5,13 +5,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -33,9 +27,7 @@ public class OrderEntity extends BaseEntity {
 //	status = 1 == pending. status = 2 == complete. status = 3 == cancel
 	@Column(name = "status")
 	private Integer status;
-	
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "orderphone_item", joinColumns = @JoinColumn(name = "orderid"),
-									inverseJoinColumns = @JoinColumn(name = "itemid"))
-	private List<ItemEntity> items = new ArrayList<>();
+
+	@OneToMany(mappedBy = "order")
+	private List<OrderItemEntity> orderitems = new ArrayList<>();
 }
