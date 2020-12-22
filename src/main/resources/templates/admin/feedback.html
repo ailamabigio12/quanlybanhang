@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quốc Đạt Mobile - Trang quản lý</title>
+
+    <th:block th:insert="~{admin/common/link :: link}"></th:block>
+
+    <th:block th:insert="~{admin/common/link :: script}"></th:block>
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <div th:insert="~{admin/common/menu :: menu}"></div>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <div th:insert="~{admin/common/header :: header}"></div>
+
+            <!-- Begin Page Content -->
+            <div class="main-content main-container" id="main-container">
+                <form th:action="@{admin/danh-sach-quan-ly}" id="formSubmit" method="get">
+
+                    <div class="main-content-inner">
+                        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                            <ul class="breadcrumb">
+                                <li>
+                                    <i class="ace-icon fa fa-home home-icon"></i>
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                            </ul>
+                            <!-- /.breadcrumb -->
+                        </div>
+                        <div class="page-content">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="widget-box table-filter">
+                                        <div class="table-btn-controls">
+                                            <div class="pull-right tableTools-container">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Tên người góp ý</th>
+                                                        <th>Số điện thoại</th>
+                                                        <th>Email</th>
+                                                        <th>Nội dung góp ý</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr th:each="fb : ${feedback}">
+                                                        <td th:text="${fb.getFullname()}"></td>
+                                                        <td th:text="${fb.getPhoneNumber()}"></td>
+                                                        <td th:text="${fb.getEmail()}"></td>
+                                                        <td th:text="${fb.getContent()}"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <ul class="pagination" id="pagination"></ul>
+                                                <input type="hidden" value="" id="page" name="page"/>
+                                                <input type="hidden" value="" id="limit" name="limit"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <div th:insert="~{admin/common/footer :: footer}"></div>
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<div th:insert="~{admin/common/additional :: additional}"></div>
+
+<th:block th:insert="~{admin/common/script :: script}"></th:block>
+
+</body>
+
+</html>

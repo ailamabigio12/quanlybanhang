@@ -44,12 +44,19 @@
                             }
                         </script>
 
-                        <ul class="breadcrumb">
-                            <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Home</a>
+                        <ul th:if="${param.itemid}" class="breadcrumb">
+                            <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang chủ</a>
                             </li>
 
-                            <li><a href="#">Forms</a></li>
-                            <li class="active">Form Elements</li>
+                            <li><a th:href="@{/admin/danh-sach-san-pham}">Danh sách sản phẩm</a></li>
+                            <li class="active"> Cập nhật sản phẩm</li>
+                        </ul>
+                        <ul th:unless="${param.itemid}" class="breadcrumb">
+                            <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang chủ</a>
+                            </li>
+
+                            <li><a th:href="@{/admin/danh-sach-san-pham}">Danh sách sản phẩm</a></li>
+                            <li class="active">Thêm sản phẩm</li>
                         </ul>
                         <!-- /.breadcrumb -->
                     </div>

@@ -55,6 +55,11 @@
 				</a>
 			</div>
 
+			<!-- create message -->
+			<div th:if="${param.success}">
+				<div class="alert alert-info">Góp ý thành công!</div>
+			</div>
+
 			<form th:action="@{/danh-sach-san-pham}" id="formSubmit" method="get">
 				<div class="row">
 					<div class="col-lg-4 col-md-6 mb-4" th:each="item : ${itemlist}">

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quốc Đạt Mobile</title>
+
+    <th:block th:insert="~{web/common/link :: link}"></th:block>
+
+    <th:block th:insert="~{web/common/link :: script}"></th:block>
+
+</head>
+
+<body class="padd">
+
+<div th:insert="~{web/common/header :: header}"></div>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+            <form th:action="@{/gop-y}" th:object="${feedback}" id="formSubmit" method="POST">
+                <div class="col-md-9 col-md-offset-3">
+
+                    <h1>Gửi góp ý cho cửa hàng</h1>
+
+                    <div class="form-group">
+                        <label class="control-label" for="fullname"> Họ và tên: </label>
+                        <input id="fullname" class="form-control" th:field="*{fullname}"
+                               required autofocus="autofocus" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="phoneNumber"> Số điện thoại: </label>
+                        <input id="phoneNumber" class="form-control" th:field="*{phoneNumber}"
+                               required autofocus="autofocus" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="email"> Email: </label>
+                        <input id="email" class="form-control" th:field="*{email}"
+                               required autofocus="autofocus" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="content"> Nội dung góp ý: </label>
+                        <textarea name="content" class="form-control" id="content" th:field="*{content}" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Gửi góp ý</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-md-4" th:insert="~{web/common/sidebar :: sidebar}"></div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<div th:insert="~{web/common/footer :: footer}"></div>
+
+<th:block th:insert="~{web/common/script :: script}"></th:block>
+
+</body>
+
+</html>
