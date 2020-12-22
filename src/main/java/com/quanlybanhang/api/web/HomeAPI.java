@@ -2,6 +2,7 @@ package com.quanlybanhang.api.web;
 
 import com.quanlybanhang.dto.FeedbackDTO;
 import com.quanlybanhang.entites.CompanyEntity;
+import com.quanlybanhang.service.IBannerService;
 import com.quanlybanhang.service.ICompanyService;
 import com.quanlybanhang.service.IFeedbackService;
 import com.quanlybanhang.service.IItemService;
@@ -25,12 +26,21 @@ public class HomeAPI {
 
 	@Autowired
 	private IFeedbackService feedbackService;
+
+	@Autowired
+	private IBannerService bannerService;
 	
 	@GetMapping(value = "/trang-chu")
 	public String homepage(Model model) {
+		model.addAttribute("banner", bannerService.findAll());
 		model.addAttribute("companylist", companyService.findAll());
 		model.addAttribute("itemlist", itemService.findAll());
 		return "web/homepage";
+	}
+
+	@GetMapping(value = {"/", ""})
+	public String homepage() {
+		return "redirect:/trang-chu";
 	}
 
 	@GetMapping(value ="/gop-y")

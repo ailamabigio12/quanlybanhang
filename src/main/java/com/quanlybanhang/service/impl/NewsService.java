@@ -46,10 +46,13 @@ public class NewsService implements INewsService {
 				newsEntity = newsConverter.toEntity(newsDTO);			
 				newsEntity.setThumbnail(filename);
 			}
-			Files.copy(multipartFile.getInputStream(), pathfiles);
+			if (filename.charAt(filename.length()-1) != '_') {
+				newsEntity.setThumbnail(filename);
+				Files.copy(multipartFile.getInputStream(), pathfiles);
+			}
 			return newsConverter.toDTO(newsRepository.save(newsEntity));			
 		} catch (Exception e) {			
-			throw null;
+			return null;
 		}		
 	}
 

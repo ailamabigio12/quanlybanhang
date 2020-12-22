@@ -40,7 +40,6 @@ public class ItemService implements IItemService {
     @Override
     public List<ItemDTO> findAll() {
         List<ItemDTO> items = new ArrayList<>();
-        itemRepository.findAllByCode(1);
         List<ItemEntity> entities = itemRepository.findAllByCode(1);
         for (ItemEntity item:entities) {
             ItemDTO itemDTO = itemConverter.toDTO(item);
@@ -82,7 +81,7 @@ public class ItemService implements IItemService {
             }
             return itemConverter.toDTO(itemRepository.save(itemEntity));
         } catch (Exception e) {
-            throw null;
+            return null;
         }
     }
 

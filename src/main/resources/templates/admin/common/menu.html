@@ -31,7 +31,7 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
            aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-fw fa-folder"></i>
             <span>Quản lý danh sách</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -40,8 +40,16 @@
                 <a class="collapse-item" th:href="@{/admin/danh-sach-san-pham}">Danh sách sản phẩm</a>
                 <a class="collapse-item" th:href="@{/admin/danh-sach-tin-tuc}">Danh sách tin tức</a>
                 <a class="collapse-item" th:href="@{/admin/danh-sach-quan-ly}">Danh sách user</a>
+                <a class="collapse-item" th:href="@{/admin/danh-sach-gop-y}">Danh sách góp ý</a>
             </div>
         </div>
+    </li>
+    
+    <li class="nav-item">
+        <a th:href="@{/admin/quan-ly-anh}" class="nav-link" aria-expanded="true">
+            <i class="fas fa-fw fa-picture-o"></i>
+            <span>Quản lý ảnh tiêu đề</span>
+        </a>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->

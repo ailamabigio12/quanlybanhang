@@ -1,5 +1,6 @@
 package com.quanlybanhang.api.web;
 
+import com.quanlybanhang.service.IBannerService;
 import com.quanlybanhang.service.ICompanyService;
 import com.quanlybanhang.service.IInfoService;
 import com.quanlybanhang.service.IItemService;
@@ -23,11 +24,15 @@ public class ItemAPI {
     @Autowired
     private IInfoService infoService;
 
+    @Autowired
+    private IBannerService bannerService;
+
     @GetMapping(value = "/danh-sach-san-pham")
     public String listItem(Model model, @RequestParam(value = "companyid", required = false) Long id) {
         if (id == null) {
             return "redirect:/trang-chu";
         } else {
+            model.addAttribute("banner", bannerService.findAll());
             model.addAttribute("companylist", companyService.findAll());
             model.addAttribute("itemlist", itemService.findAllByCompanyId(id));
             return "web/itemlist";
