@@ -1,35 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05dbde28-77a0-4730-b9c0-da19c963bc2e" name="Default Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/admin/BannerAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/converter/BannerConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/dto/BannerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/repository/BannerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/IBannerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/BannerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/picture.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/picturelist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/common/banner.html" afterDir="false" />
+    <list default="true" id="05dbde28-77a0-4730-b9c0-da19c963bc2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity4_3_0_2_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/admin/HomeAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/admin/HomeAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/web/HomeAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/web/HomeAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/web/ItemAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/web/ItemAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/common/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/common/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/itemlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/itemlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/itemlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/itemlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/HomeAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/admin/HomeAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/HomeAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/HomeAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/ItemAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/api/web/ItemAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/ItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlybanhang/service/impl/NewsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/common/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/common/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/itemlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/itemlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quanlybanhang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/quanlybanhang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/itemlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/itemlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/web/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/web/common/header.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,14 +77,62 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/dto/BannerDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="384">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/config/WebSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/common/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="134" column="110" selection-start-line="134" selection-start-column="110" selection-end-line="134" selection-end-column="110" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -152,9 +181,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/userlist.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/admin/UserAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/common/header.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/register.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -166,12 +193,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/OrderItemEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/UserService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/IItemService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/repository/ItemRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/web/NewsAPI.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/web/common/footer.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/web/common/header.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/newslist.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/item.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/dto/FeedbackDTO.java" />
@@ -200,6 +225,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/web/common/banner.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/web/HomeAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlybanhang/dto/BannerDTO.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/web/common/header.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/common/header.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
       </list>
     </option>
   </component>
@@ -554,7 +583,7 @@
       <workItem from="1608094852189" duration="1789000" />
       <workItem from="1608171326376" duration="19859000" />
       <workItem from="1608274014280" duration="4205000" />
-      <workItem from="1608515682874" duration="34415000" />
+      <workItem from="1608515682874" duration="36878000" />
     </task>
     <task id="LOCAL-00001" summary="done">
       <created>1607934382434</created>
@@ -577,11 +606,18 @@
       <option name="project" value="LOCAL" />
       <updated>1608612321788</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit">
+      <created>1608626269630</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608626269630</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144588000" />
+    <option name="totallyTimeSpent" value="147051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -599,7 +635,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32940108" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.2902655" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.30530974" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.30530974" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -607,7 +643,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005325" side_tool="true" weight="0.32920355" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.21592921" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.21592921" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32920355" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -644,34 +680,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/service/impl/CompanyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="78" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/api/web/NewsAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/entites/ItemEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -749,13 +757,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1055,11 +1056,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/dto/BannerDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="384">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlybanhang/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/web/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="134" column="110" selection-start-line="134" selection-start-column="110" selection-end-line="134" selection-end-column="110" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
         </state>
       </provider>
     </entry>

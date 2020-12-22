@@ -24,8 +24,11 @@
 				<li class="nav-item text-muted">
 					<a class="nav-link" th:href="@{/gop-y}">Góp ý</a>
 				</li>
-				<li class="nav-item text-muted">
+				<li class="nav-item text-muted" sec:authorize="!isAuthenticated()">
 					<a class="nav-link" th:href="@{dang-nhap}">Đăng nhập</a>
+				</li>
+				<li class="nav-item text-muted" sec:authorize="isAuthenticated()">
+					<a class="nav-link" th:href="@{/logout}">Đăng xuất</a>
 				</li>
 			</ul>
 		</div>
