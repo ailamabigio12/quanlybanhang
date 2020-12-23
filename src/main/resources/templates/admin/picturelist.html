@@ -96,13 +96,11 @@
                                                         <td><img th:src="@{~/images/{thumb}(thumb = ${item.getUrl()})}" width=250 height="150"></td>
                                                         <td>
                                                             <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
-                                                               title="Cập nhật sản phẩm" th:href='@{/admin/anh?id={id}(id = ${item.getId()})}'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                               title="Cập nhật ảnh" th:href='@{/admin/anh?id={id}(id = ${item.getId()})}'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                             </a>
-                                                            <form th:method="PUT" th:action="@{/admin/danh-sach-san-pham?itemid={id}(id = ${item.getId()})}">
-                                                                <button type="submit" id="submit" class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip">
-                                                                    <i class="fa fa-trash-o bigger-110 red"></i>
-                                                                </button>
-                                                            </form>
+                                                            <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
+                                                               title="Xóa ảnh" th:href='@{/admin/quan-ly-anh/{id}(id = ${item.getId()})}'><i class="fa fa-recycle fa-square-o" aria-hidden="true"></i>
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                     </tbody>

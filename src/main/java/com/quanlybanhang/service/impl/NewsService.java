@@ -3,6 +3,7 @@ package com.quanlybanhang.service.impl;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,14 @@ public class NewsService implements INewsService {
 	private NewsConverter newsConverter;
 	
 	@Override
-	public List<NewsEntity> findAll() {
-
-		return newsRepository.findAll();
+	public List<NewsDTO> findAll() {
+		List<NewsEntity> entities = newsRepository.findAllByCode(1);
+		List<NewsDTO> dtos = new ArrayList<>();
+		for (NewsEntity entity : entities) {
+			NewsDTO dto = newsConverter.toDTO(entity);
+			dtos.add(dto);
+		}
+		return dtos;
 	}
 
 	@Override
@@ -41,10 +47,12 @@ public class NewsService implements INewsService {
 			if(newsDTO.getId() != null ) {
 				NewsEntity oldEntity = newsRepository.findOneById(newsDTO.getId());
 				newsEntity = newsConverter.toEntity(newsDTO, oldEntity);
-				newsEntity.setThumbnail(filename);				
+				newsEntity.setThumbnail(filename);
+				newsEntity.setCode(1);
 			} else {				
 				newsEntity = newsConverter.toEntity(newsDTO);			
 				newsEntity.setThumbnail(filename);
+				newsEntity.setCode(1);
 			}
 			if (filename.charAt(filename.length()-1) != '_') {
 				newsEntity.setThumbnail(filename);
@@ -63,7 +71,9 @@ public class NewsService implements INewsService {
 	}
 
 	@Override
-	public void delete(Long id) {
-		newsRepository.deleteById(id);
+	public void setCodeZero(Long id) {
+		NewsEntity newsEntity = newsRepository.findOneById(id);
+		newsEntity.setCode(0);
+		newsRepository.save(newsEntity);
 	}
 }

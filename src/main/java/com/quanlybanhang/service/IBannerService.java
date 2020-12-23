@@ -12,4 +12,6 @@ public interface IBannerService {
     BannerDTO findById(Long id);
 
     BannerDTO save(MultipartFile file, BannerDTO dto);
+
+    void setCodeZero(Long id);
 }

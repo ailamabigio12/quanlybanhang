@@ -20,6 +20,19 @@ public class BannerAPI {
         return "admin/picturelist";
     }
 
+    @GetMapping(value = "/admin/quan-ly-anh/{id}")
+    public String deletePicture(@PathVariable(name = "id") Long id) {
+        return "admin/pictureconfirm";
+    }
+
+    @PutMapping(value = "/admin/quan-ly-anh/{id}")
+    public String deletePicture(@PathVariable(name = "id") Long id,
+                                Model model) {
+        model.addAttribute("id", id);
+        bannerService.setCodeZero(id);
+        return "redirect:/admin/quan-ly-anh";
+    }
+
     @GetMapping(value = "/admin/anh")
     public String pictureUpdate(Model model,
                                 @RequestParam(value = "file", required = false) MultipartFile file,

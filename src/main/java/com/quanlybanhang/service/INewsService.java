@@ -1,19 +1,18 @@
 package com.quanlybanhang.service;
 
-import java.util.List;
-
-import org.springframework.web.multipart.MultipartFile;
-
 import com.quanlybanhang.dto.NewsDTO;
 import com.quanlybanhang.entites.NewsEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 public interface INewsService {
 
-	public List<NewsEntity> findAll();
+	List<NewsDTO> findAll();
 	
-	public NewsDTO findById(Long id);
+	NewsDTO findById(Long id);
 	
-	public NewsDTO saveNews(MultipartFile multipartFile, NewsDTO newsDTO);
+	NewsDTO saveNews(MultipartFile multipartFile, NewsDTO newsDTO);
 	
-	public void delete(Long id); 
+	void setCodeZero(Long id);
 }

@@ -47,6 +47,11 @@
 						<div class="alert alert-info">Thay đổi tin tức thành công!</div>
 					</div>
 
+					<!-- delete message -->
+					<div th:if="${param.dsuccess}">
+						<div class="alert alert-info">Xóa tin tức thành công!</div>
+					</div>
+
 					<div class="main-content-inner">
 						<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 							<ul class="breadcrumb">
@@ -98,11 +103,9 @@
 															<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
 															   title="Cập nhật bài viết" th:href='@{/admin/tin-tuc?id={id}(id = ${news.getId()})}'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 															</a>
-															<form th:method="DELETE" th:action="@{/admin/danh-sach-tin-tuc/d?id={id}(id = ${news.getId()})}">
-																<button type="submit" id="submit" class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip">
-																	<i class="fa fa-trash-o bigger-110 pink"></i>
-																</button>
-															</form>
+															<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
+															   title="Xóa bài viết" th:href='@{/admin/danh-sach-tin-tuc/{id}(id = ${news.getId()})}'><i class="fa fa-recycle fa-square-o" aria-hidden="true"></i>
+															</a>
 														</td>
 													</tr>
 													</tbody>

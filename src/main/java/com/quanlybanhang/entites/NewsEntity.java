@@ -17,6 +17,9 @@ public class NewsEntity extends BaseEntity {
 	
 	@Column(name = "thumbnail")
 	private String thumbnail;
+
+	@Column(name = "code")
+	private Integer code;
 	
 	@Column(name = "shortdescription", columnDefinition = "TEXT")
 	private String shortDescription;

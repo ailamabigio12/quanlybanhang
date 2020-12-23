@@ -67,4 +67,11 @@ public class BannerService implements IBannerService {
             return null;
         }
     }
+
+    @Override
+    public void setCodeZero(Long id) {
+        BannerEntity bannerEntity = bannerRepository.findOneById(id);
+        bannerEntity.setCode(0);
+        bannerRepository.save(bannerEntity);
+    }
 }
