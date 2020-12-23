@@ -15,7 +15,7 @@ public interface IItemService {
 
     public ItemDTO save(MultipartFile file, ItemDTO itemDTO, InfoDTO infoDTO);
 
-    public void setCodeZero( ItemDTO itemDTO);
+    public void setCodeZero( Long id);
 
     public List<ItemDTO> findAllByCompanyId(Long id);
 }

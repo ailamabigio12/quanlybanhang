@@ -98,8 +98,8 @@ public class ItemService implements IItemService {
     }
 
     @Override
-    public void setCodeZero(ItemDTO itemDTO) {
-        ItemEntity itemEntity = itemConverter.toEntity(itemDTO);
+    public void setCodeZero(Long id) {
+        ItemEntity itemEntity = itemRepository.findOneById(id);
         itemEntity.setCode(0);
         itemRepository.save(itemEntity);
     }

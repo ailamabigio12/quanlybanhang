@@ -47,14 +47,18 @@
                         <div class="alert alert-info">Thay đổi thông tin sản phẩm thành công!</div>
                     </div>
 
+                    <div th:if="${param.dsuccess}">
+                        <div class="alert alert-info">Xóa sản phẩm thành công!</div>
+                    </div>
+
                     <div class="main-content-inner">
                         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                             <ul class="breadcrumb">
                                 <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang chủ</a></li>
                                 <li class="active">Danh sách sản phẩm</li>
                             </ul>
-                            <!-- /.breadcrumb -->
                         </div>
+                        <!-- /.breadcrumb -->
                         <div class="page-content">
                             <div class="row">
                                 <div class="col-xs-12">
@@ -87,7 +91,6 @@
                                                     <tr>
                                                         <th>Tên sản phẩm</th>
                                                         <th>Ảnh sản phẩm</th>
-                                                        <th>Ảnh sản phẩm</th>
                                                         <th>Giá sản phẩm</th>
                                                         <th>Mô tả sản phẩm</th>
                                                         <th>Thao tác</th>
@@ -104,11 +107,9 @@
                                                             <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
                                                                title="Cập nhật sản phẩm" th:href='@{/admin/san-pham?itemid={id}(id = ${item.getId()})}'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                             </a>
-                                                            <form th:method="PUT" th:action="@{/admin/danh-sach-san-pham?itemid={id}(id = ${item.getId()})}">
-                                                                <button type="submit" id="submit" class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip">
-                                                                    <i class="fa fa-trash-o bigger-110 red"></i>
-                                                                </button>
-                                                            </form>
+                                                            <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
+                                                               title="Xóa sản phẩm" th:href='@{/admin/danh-sach-san-pham/{id}(id = ${item.getId()})}'><i class="fa fa-recycle fa-square-o" aria-hidden="true"></i>
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                     </tbody>
