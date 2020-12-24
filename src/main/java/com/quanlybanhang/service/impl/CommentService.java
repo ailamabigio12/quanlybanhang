@@ -5,10 +5,11 @@ import com.quanlybanhang.dto.CommentDTO;
 import com.quanlybanhang.dto.ItemDTO;
 import com.quanlybanhang.entites.CommentEntity;
 import com.quanlybanhang.entites.ItemEntity;
+import com.quanlybanhang.entites.RoleEntity;
 import com.quanlybanhang.repository.CommentRepository;
 import com.quanlybanhang.repository.ItemRepository;
+import com.quanlybanhang.repository.RoleRepository;
 import com.quanlybanhang.service.ICommentService;
-import com.sun.tools.doclets.internal.toolkit.util.CommentedMethodFinder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,9 @@ public class CommentService implements ICommentService {
 
     @Autowired
     private CommentRepository commentRepository;
+
+    @Autowired
+    private RoleRepository roleRepository;
 
     @Autowired
     private ItemRepository itemRepository;
@@ -41,9 +45,12 @@ public class CommentService implements ICommentService {
 
     @Override
     public CommentDTO save(CommentDTO commentDTO, Long id) {
-        ItemEntity itemEntity = itemRepository.findOneById(id);
+        RoleEntity role = roleRepository.findOneById(commentDTO.getRoleId());
+        ItemEntity item = itemRepository.findOneById(id);
         CommentEntity commentEntity = commentConverter.toEntity(commentDTO);
-        commentEntity.setItem(itemEntity);
+        commentEntity.setCode(1);
+        commentEntity.setItem(item);
+        commentEntity.setRole(role);
         return commentConverter.toDTO(commentRepository.save(commentEntity));
     }
 

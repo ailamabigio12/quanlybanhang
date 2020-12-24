@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+
 @Controller(value = "itemAPIOfWeb")
 public class ItemAPI {
 
@@ -42,20 +44,21 @@ public class ItemAPI {
     @GetMapping(value = "/san-pham")
     public String showItem(Model model, @RequestParam(value = "id") Long id,
                            @RequestParam(value = "infoid") Long infoId) {
-        System.out.println(itemService.findById(id));
         model.addAttribute("companylist", companyService.findAll());
         model.addAttribute("item", itemService.findById(id));
         model.addAttribute("info", infoService.findById(infoId));
         model.addAttribute("comment", commentService.findAll(itemService.findById(id)));
+        model.addAttribute("addcomment", new CommentDTO());
         return "web/item";
     }
 
 //    Comment in item page
     @PostMapping(value = "/san-pham")
     public String commentItem(@RequestParam(value = "id") Long id,
+                              @RequestParam(value = "infoid") Long infoId,
                               @ModelAttribute CommentDTO commentDTO) {
         commentService.save(commentDTO, id);
-        return "redirect:/san-pham?id=" + id;
+        return "redirect:/san-pham?id=" + id + "&infoid=" + infoId;
     }
 
     @PutMapping(value = "/san-pham")

@@ -29,7 +29,7 @@ public class CommentEntity extends BaseEntity {
 	private ItemEntity item;
 
 	@ManyToOne
-	@JoinColumn(name = "userid")
-	private UserEntity user;
+	@JoinColumn(name = "roleid")
+	private RoleEntity role;
 
 }

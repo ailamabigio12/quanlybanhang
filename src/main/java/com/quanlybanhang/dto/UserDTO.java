@@ -14,13 +14,13 @@ import java.util.Date;
 @Builder
 public class UserDTO extends BaseEntity {
 
-    private String username;
+    private String userName;
 
     private String password;
 
     private String email;
 
-    private String fullname;
+    private String fullName;
 
     private Integer phoneNumber;
 

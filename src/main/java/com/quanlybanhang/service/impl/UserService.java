@@ -38,8 +38,8 @@ public class UserService implements IUserService {
         for (UserEntity entity : entities) {
             UserDTO user = new UserDTO();
             user.setId(entity.getId());
-            user.setUsername(entity.getUserName());
-            user.setFullname(entity.getFullName());
+            user.setUserName(entity.getUserName());
+            user.setFullName(entity.getFullName());
             user.setEmail(entity.getEmail());
             user.setPhoneNumber(entity.getPhoneNumber());
             users.add(user);
@@ -50,11 +50,11 @@ public class UserService implements IUserService {
     @Override
     public UserEntity registerUser(UserDTO userDTO) {
         UserEntity user = new UserEntity(1,
-                                         userDTO.getUsername(),
+                                         userDTO.getUserName(),
                                          passwordEncoder.encode(userDTO.getPassword()),
                                          userDTO.getEmail(),
                                          userDTO.getPhoneNumber(),
-                                         userDTO.getFullname(),
+                                         userDTO.getFullName(),
                                          userDTO.getIdentityNumber(),
                                          Arrays.asList(roleRepository.findOneByName("ROLE_ADMIN")));
         return userRepository.save(user);

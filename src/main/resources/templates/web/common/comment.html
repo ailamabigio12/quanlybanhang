@@ -2,16 +2,17 @@
     <h1 class="comments-title" th:with="commt=${comment}" th:text="'Bình luận (' + ${commt.size()} + ')'"></h1>
     <div class="be-comment" th:each="cmt, commt : ${comment}">
         <div class="be-img-comment">
-            <a href="blog-detail-2.html">
-                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
+            <a>
+                <img th:if="${cmt.getRoleId()}" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="be-ava-comment">
+                <img th:unless="${cmt.getRoleId()}" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
             </a>
         </div>
         <div class="be-comment-content">
 
-            <span th:if="${cmt.getUserId()}" class="be-comment-name">
+            <span th:if="${cmt.getRoleId()}" class="be-comment-name">
                 <a href="blog-detail-2.html" th:text="${cmt.getName()} + ' - admin'"></a>
             </span>
-            <span th:unless="${cmt.getUserId()}" class="be-comment-name">
+            <span th:unless="${cmt.getRoleId()}" class="be-comment-name">
                 <a href="blog-detail-2.html" th:text="${cmt.getName()}"></a>
             </span>
 <!--            <span class="be-comment-time">-->
@@ -25,32 +26,63 @@
 
     <br>
 
-    <form class="form-block">
-        <div class="row">
+    <form class="form-block" th:action="@{/san-pham?id={id}&infoid={infoid}(id = ${param.id}, infoid = ${param.infoid})}" method="POST" th:object="${addcomment}">
+        <div class="row" sec:authorize="!isAuthenticated()">
             <div class="col-xs-12 col-sm-6">
                 <div class="form-group fl_icon">
                     <div class="icon fa fa-user-circle-o"><i class="fa fa-user-circle-o"></i></div>
-                    <input class="form-input" type="text" placeholder="Họ và tên">
+                    <input class="form-input" type="text" placeholder="Họ và tên" th:field="*{name}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 fl_icon">
                 <div class="form-group fl_icon">
                     <div class="icon fa fa-user-circle-o"><i class="fa fa-user-circle-o"></i></div>
-                    <input class="form-input" type="number" placeholder="Số điện thoại">
+                    <input class="form-input" type="number" placeholder="Số điện thoại" th:field="*{phoneNumber}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 fl_icon">
                 <div class="form-group fl_icon">
                     <div class="icon fa fa-envelope-square"><i class="fa fa-envelope-square"></i></div>
-                    <input class="form-input" type="text" placeholder="Email">
+                    <input class="form-input" type="text" placeholder="Email" th:field="*{email}">
                 </div>
             </div>
         </div>
-            <div class="col-xs-12">
-                <div class="form-group">
-                    <textarea class="form-input" required="" placeholder="Bình luận"></textarea>
+
+        <div class="row" sec:authorize="isAuthenticated()">
+            <div class="col-xs-12 col-sm-6">
+                <div class="form-group fl_icon">
+                    <sec:csrfInput />
+                    <div class="icon fa fa-user-circle-o"><i class="fa fa-user-circle-o"></i></div>
+                    <input class="form-input" style="color: black;" type="text" placeholder="Họ và tên" th:field="*{name}" name="name" id="name">
                 </div>
             </div>
-            <a class="btn btn-primary pull-right">submit</a>
+            <div class="col-xs-12 col-sm-6 fl_icon">
+                <div class="form-group fl_icon">
+                    <div class="icon fa fa-user-circle-o"><i class="fa fa-user-circle-o"></i></div>
+                    <input class="form-input" style="color: black;" type="number" placeholder="Số điện thoại" th:field="*{phoneNumber}" name="phone" id="phone">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 fl_icon">
+                <div class="form-group fl_icon">
+                    <div class="icon fa fa-envelope-square"><i class="fa fa-envelope-square"></i></div>
+                    <input class="form-input" style="color: black;" type="text" placeholder="Email" th:field="*{email}" name="email" id="email">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 fl_icon">
+                <div class="form-group fl_icon">
+                    <div hidden="true" class="icon fa fa-envelope-square"><i class="fa fa-envelope-square"></i></div>
+                    <input class="form-input" type="text" hidden="true" th:field="*{roleId}" name="roleid" id="roleid">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="form-group">
+                <textarea class="form-input" required="" placeholder="Bình luận" th:field="*{content}"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-info" th:onclick="'loadResult();'">
+            <i class="btn btn-primary pull-right">submit</i>
+        </button>
     </form>
 </div>

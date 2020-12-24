@@ -11,7 +11,7 @@ public class CommentConverter {
     public CommentDTO toDTO(CommentEntity entity) {
         CommentDTO dto = new CommentDTO();
         try {
-            dto.setUserId(entity.getUser().getId());
+            dto.setRoleId(entity.getRole().getId());
             dto.setId(entity.getId());
             dto.setContent(entity.getContent());
             dto.setEmail(entity.getEmail());

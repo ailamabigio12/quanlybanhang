@@ -91,9 +91,9 @@
             </div>
 
             <!-- Side Widget -->
-            <div class="card my-4">
+            <div class="card my-4 info">
                 <form th:action="@{/san-pham?id={id}&infoid={infoid}(id = ${param.id}, infoid = ${param.infoid})}" th:object="${info}" method="get">
-                    <table class="table">
+                    <table class="table" th:fragment="info">
                         <thead>
                         <tr>
                             <th rowspan="2">Thông số kĩ thuật</th>
@@ -146,6 +146,37 @@
 <!-- /.container -->
 
 <div th:insert="~{web/common/footer :: footer}"></div>
+
+<!--<script>-->
+<!--    function loadResult()-->
+<!--    {-->
+
+<!--        $.ajax({-->
+<!--            type: 'get',-->
+<!--            url: /*[['@{/san-pham?id={id}&infoid={infoid}(id = ${param.id}, infoid = ${param.infoid})}']]*/,-->
+
+<!--            success: function(data){-->
+
+<!--                /*<![CDATA[*/-->
+
+
+<!--                $('.info').html(data);-->
+
+
+<!--                /*]]>*/-->
+<!--            },-->
+
+<!--        })-->
+
+<!--    }-->
+<!--</script>-->
+
+<script type="text/javascript">
+    document.getElementById("name").value="[[${#authentication.getPrincipal().getFullName()}]]";
+    document.getElementById("phone").value="[[${#authentication.getPrincipal().getPhoneNumber()}]]";
+    document.getElementById("email").value="[[${#authentication.getPrincipal().getEmail()}]]";
+    document.getElementById("roleid").value=1;
+</script>
 
 <th:block th:insert="~{web/common/script :: script}"></th:block>
 

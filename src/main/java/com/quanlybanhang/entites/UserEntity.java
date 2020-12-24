@@ -37,9 +37,6 @@ public class UserEntity extends BaseEntity {
 	@Column(name = "code")
 	private Integer code;
 
-	@OneToMany(mappedBy = "user")
-	private List<CommentEntity> comments = new ArrayList<>();
-
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(name = "users_roles",
 			   joinColumns = @JoinColumn(name = "userid", referencedColumnName = "id"),
