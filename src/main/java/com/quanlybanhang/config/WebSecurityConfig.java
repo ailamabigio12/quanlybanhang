@@ -41,7 +41,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //    Config lại những trang được phép thao tác và trang login logout
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
+
+        http.authorizeRequests().antMatchers("/admin/tao-tai-khoan").access("hasAnyRole('ROLE_MANAGER')");
+
+        http.authorizeRequests().antMatchers("/admin/**").access("hasAnyRole('ROLE_ADMIN', 'ROLE_MANAGER')")
                 .and()
                 .formLogin()
                 .loginPage("/dang-nhap")
@@ -54,6 +57,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/dang-nhap?logout")
                 .permitAll();
+
         http.authorizeRequests().antMatchers("/**").permitAll();
     }
 }

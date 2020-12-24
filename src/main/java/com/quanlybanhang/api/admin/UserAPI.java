@@ -5,9 +5,7 @@ import com.quanlybanhang.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserAPI {
@@ -30,6 +28,19 @@ public class UserAPI {
     public String listUsers(Model model) {
         model.addAttribute("userlist", userService.findAll());
         return "admin/userlist";
+    }
+
+    @GetMapping(value = "/admin/danh-sach-quan-ly/{id}")
+    public String deleteItem(@PathVariable(name = "id") Long id) {
+        return "admin/userconfirm";
+    }
+
+    @PutMapping(value = "/admin/danh-sach-quan-ly/{id}")
+    public String deleteItem(@PathVariable(name = "id") Long id,
+                             Model model) {
+        model.addAttribute("id", id);
+        userService.setCodeZero(id);
+        return "redirect:/admin/danh-sach-quan-ly?dsuccess";
     }
 
     @PostMapping(value = "/admin/tao-tai-khoan")

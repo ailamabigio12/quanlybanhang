@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -36,13 +37,17 @@ public class UserEntity extends BaseEntity {
 	@Column(name = "code")
 	private Integer code;
 
+	@OneToMany(mappedBy = "user")
+	private List<CommentEntity> comments = new ArrayList<>();
+
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(name = "users_roles",
 			   joinColumns = @JoinColumn(name = "userid", referencedColumnName = "id"),
 			   inverseJoinColumns = @JoinColumn(name = "roleid", referencedColumnName = "id"))
 	private Collection<RoleEntity> roles;
 
-	public UserEntity(String userName, String password, String email, Integer phoneNumber, String fullName, Long identityNumber, List<RoleEntity> roles) {
+	public UserEntity(Integer code, String userName, String password, String email, Integer phoneNumber, String fullName, Long identityNumber, List<RoleEntity> roles) {
+		this.code = code;
 		this.userName = userName;
 		this.password = password;
 		this.email = email;

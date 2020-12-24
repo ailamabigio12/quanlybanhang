@@ -27,6 +27,5 @@ public class CommentDTO extends AbstractDTO {
 
     private Long itemId;
 
-    @NotBlank
-    private ItemDTO item;
+    private Long userId;
 }

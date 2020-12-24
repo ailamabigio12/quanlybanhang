@@ -8,7 +8,10 @@
         </div>
         <div class="be-comment-content">
 
-            <span class="be-comment-name">
+            <span th:if="${cmt.getUserId()}" class="be-comment-name">
+                <a href="blog-detail-2.html" th:text="${cmt.getName()} + ' - admin'"></a>
+            </span>
+            <span th:unless="${cmt.getUserId()}" class="be-comment-name">
                 <a href="blog-detail-2.html" th:text="${cmt.getName()}"></a>
             </span>
 <!--            <span class="be-comment-time">-->

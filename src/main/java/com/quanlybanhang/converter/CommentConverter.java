@@ -10,13 +10,24 @@ public class CommentConverter {
 
     public CommentDTO toDTO(CommentEntity entity) {
         CommentDTO dto = new CommentDTO();
-        dto.setId(entity.getId());
-        dto.setContent(entity.getContent());
-        dto.setEmail(entity.getEmail());
-        dto.setName(entity.getName());
-        dto.setPhoneNumber(entity.getPhoneNumber());
-        dto.setItemId(entity.getItem().getId());
-        return dto;
+        try {
+            dto.setUserId(entity.getUser().getId());
+            dto.setId(entity.getId());
+            dto.setContent(entity.getContent());
+            dto.setEmail(entity.getEmail());
+            dto.setName(entity.getName());
+            dto.setPhoneNumber(entity.getPhoneNumber());
+            dto.setItemId(entity.getItem().getId());
+            return dto;
+        } catch (Exception e) {
+            dto.setId(entity.getId());
+            dto.setContent(entity.getContent());
+            dto.setEmail(entity.getEmail());
+            dto.setName(entity.getName());
+            dto.setPhoneNumber(entity.getPhoneNumber());
+            dto.setItemId(entity.getItem().getId());
+            return dto;
+        }
     }
 
     public CommentEntity toEntity(CommentDTO dto) {

@@ -9,5 +9,8 @@ import java.util.List;
 public interface IUserService extends UserDetailsService {
 
     UserEntity registerUser(UserDTO userDTO);
+
     List<UserDTO> findAll();
+
+    void setCodeZero(Long id);
 }

@@ -37,6 +37,16 @@
             <div class="main-content main-container" id="main-container">
                 <form th:action="@{admin/danh-sach-quan-ly}" id="formSubmit" method="get">
 
+                    <!-- success message -->
+                    <div th:if="${param.csuccess}">
+                        <div class="alert alert-info">Tạo tài khoản mới thành công</div>
+                    </div>
+
+                    <!-- delete message -->
+                    <div th:if="${param.dsuccess}">
+                        <div class="alert alert-info">Xóa tài khoản thành công</div>
+                    </div>
+
                     <div class="main-content-inner">
                         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                             <ul class="breadcrumb">
@@ -50,7 +60,7 @@
                         <div class="page-content">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="widget-box table-filter">
+                                    <div class="widget-box table-filter" sec:authorize="hasRole('ROLE_MANAGER')">
                                         <div class="table-btn-controls">
                                             <div class="pull-right tableTools-container">
                                                 <div class="dt-buttons btn-overlap btn-group">
@@ -66,11 +76,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- success message -->
-                                    <div th:if="${param.csuccess}">
-                                        <div class="alert alert-info">Tạo tài khoản mới thành công</div>
-                                    </div>
-
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="table-responsive">
@@ -80,6 +85,7 @@
                                                         <th>Tên tài khoản</th>
                                                         <th>Họ và tên</th>
                                                         <th>Email</th>
+                                                        <th sec:authorize="hasRole('ROLE_MANAGER')">Thao tác</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -87,6 +93,11 @@
                                                         <td th:text="${user.getUsername()}"></td>
                                                         <td th:text="${user.getFullname()}"></td>
                                                         <td th:text="${user.getEmail()}"></td>
+                                                        <td sec:authorize="hasRole('ROLE_MANAGER')">
+                                                            <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
+                                                               title="Xóa sản phẩm" th:href='@{/admin/danh-sach-quan-ly/{id}(id = ${user.getId()})}'><i class="fa fa-recycle fa-square-o" aria-hidden="true"></i>
+                                                            </a>
+                                                        </td>
                                                     </tr>
                                                     </tbody>
                                                 </table>

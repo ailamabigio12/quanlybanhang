@@ -9,13 +9,13 @@ import java.util.List;
 
 public interface IItemService {
 
-    public List<ItemDTO> findAll();
+    List<ItemDTO> findAll();
 
-    public ItemDTO findById(Long id);
+    ItemDTO findById(Long id);
 
-    public ItemDTO save(MultipartFile file, ItemDTO itemDTO, InfoDTO infoDTO);
+    ItemDTO save(MultipartFile file, ItemDTO itemDTO, InfoDTO infoDTO);
 
-    public void setCodeZero( Long id);
+    void setCodeZero( Long id);
 
-    public List<ItemDTO> findAllByCompanyId(Long id);
+    List<ItemDTO> findAllByCompanyId(Long id);
 }

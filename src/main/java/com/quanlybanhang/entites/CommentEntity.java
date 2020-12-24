@@ -28,4 +28,8 @@ public class CommentEntity extends BaseEntity {
 	@JoinColumn(name = "itemid", nullable = false)
 	private ItemEntity item;
 
+	@ManyToOne
+	@JoinColumn(name = "userid")
+	private UserEntity user;
+
 }

@@ -1,5 +1,6 @@
 package com.quanlybanhang.dto;
 
+import com.quanlybanhang.entites.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserDTO {
+public class UserDTO extends BaseEntity {
 
     private String username;
 
