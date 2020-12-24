@@ -25,6 +25,9 @@ public class UserEntity extends BaseEntity {
 	
 	@Column(name = "fullname", length = 50)
 	private String fullName;
+
+	@Column(name = "phonenumber")
+	private Integer phoneNumber;
 	
 	@Column(name = "identitynumber", length = 12, nullable = false)
 	private Long identityNumber;
@@ -39,10 +42,11 @@ public class UserEntity extends BaseEntity {
 			   inverseJoinColumns = @JoinColumn(name = "roleid", referencedColumnName = "id"))
 	private Collection<RoleEntity> roles;
 
-	public UserEntity(String userName, String password, String email, String fullName, Long identityNumber, List<RoleEntity> roles) {
+	public UserEntity(String userName, String password, String email, Integer phoneNumber, String fullName, Long identityNumber, List<RoleEntity> roles) {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
+		this.phoneNumber = phoneNumber;
 		this.fullName = fullName;
 		this.identityNumber = identityNumber;
 		this.roles = roles;

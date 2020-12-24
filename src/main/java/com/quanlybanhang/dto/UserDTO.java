@@ -21,5 +21,7 @@ public class UserDTO {
 
     private String fullname;
 
+    private Integer phoneNumber;
+
     private Long identityNumber;
 }

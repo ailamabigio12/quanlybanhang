@@ -5,6 +5,7 @@ import com.quanlybanhang.entites.RoleEntity;
 import com.quanlybanhang.entites.UserEntity;
 import com.quanlybanhang.repository.UserRepository;
 import com.quanlybanhang.service.IUserService;
+import com.quanlybanhang.utils.MyUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -38,6 +39,7 @@ public class UserService implements IUserService {
             user.setUsername(entity.getUserName());
             user.setFullname(entity.getFullName());
             user.setEmail(entity.getEmail());
+            user.setPhoneNumber(entity.getPhoneNumber());
             users.add(user);
         }
         return users;
@@ -48,6 +50,7 @@ public class UserService implements IUserService {
         UserEntity user = new UserEntity(userDTO.getUsername(),
                                          passwordEncoder.encode(userDTO.getPassword()),
                                          userDTO.getEmail(),
+                                         userDTO.getPhoneNumber(),
                                          userDTO.getFullname(),
                                          userDTO.getIdentityNumber(),
                                          Arrays.asList(new RoleEntity("ROLE_ADMIN")));
@@ -55,12 +58,12 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public MyUser loadUserByUsername(String username) throws UsernameNotFoundException {
         UserEntity user = userRepository.findByUserName(username);
         if (user == null) {
             throw new UsernameNotFoundException("Tài khoản hoặc mật khẩu không đúng! Bạn hãy nhập lại");
         }
-        return new User(user.getUserName(), user.getPassword(), mapRoleToAuthority(user.getRoles()));
+        return new MyUser(user.getUserName(), user.getPassword(), mapRoleToAuthority(user.getRoles()), user.getFullName(), user.getEmail(), user.getPhoneNumber());
     }
 
     private Collection<? extends GrantedAuthority> mapRoleToAuthority(Collection<RoleEntity> roles) {
