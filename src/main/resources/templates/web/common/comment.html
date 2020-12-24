@@ -51,27 +51,32 @@
         <div class="row" sec:authorize="isAuthenticated()">
             <div class="col-xs-12 col-sm-6">
                 <div class="form-group fl_icon">
-                    <sec:csrfInput />
                     <div class="icon fa fa-user-circle-o"><i class="fa fa-user-circle-o"></i></div>
-                    <input class="form-input" style="color: black;" type="text" placeholder="Họ và tên" th:field="*{name}" name="name" id="name">
+                    <input class="form-input" readonly="readonly" style="color: black;" type="text" placeholder="Họ và tên" th:field="*{name}" name="name" id="name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 fl_icon">
                 <div class="form-group fl_icon">
                     <div class="icon fa fa-user-circle-o"><i class="fa fa-user-circle-o"></i></div>
-                    <input class="form-input" style="color: black;" type="number" placeholder="Số điện thoại" th:field="*{phoneNumber}" name="phone" id="phone">
+                    <input class="form-input" readonly="readonly" style="color: black;" type="number" placeholder="Số điện thoại" th:field="*{phoneNumber}" name="phone" id="phone">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 fl_icon">
                 <div class="form-group fl_icon">
                     <div class="icon fa fa-envelope-square"><i class="fa fa-envelope-square"></i></div>
-                    <input class="form-input" style="color: black;" type="text" placeholder="Email" th:field="*{email}" name="email" id="email">
+                    <input class="form-input" readonly="readonly" style="color: black;" type="text" placeholder="Email" th:field="*{email}" name="email" id="email">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 fl_icon">
+            <div class="col-xs-12 col-sm-6 fl_icon" sec:authorize="hasRole('ROLE_MANAGER')">
                 <div class="form-group fl_icon">
                     <div hidden="true" class="icon fa fa-envelope-square"><i class="fa fa-envelope-square"></i></div>
-                    <input class="form-input" type="text" hidden="true" th:field="*{roleId}" name="roleid" id="roleid">
+                    <input class="form-input" readonly="readonly" type="text" hidden="true" th:field="*{roleId}" name="roleid" id="aaaa">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 fl_icon" sec:authorize="hasRole('ROLE_ADMIN')">
+                <div class="form-group fl_icon">
+                    <div hidden="true" class="icon fa fa-envelope-square"><i class="fa fa-envelope-square"></i></div>
+                    <input class="form-input" readonly="readonly" type="text" hidden="true" th:field="*{roleId}" name="roleid" id="roleid">
                 </div>
             </div>
         </div>
@@ -82,7 +87,7 @@
             </div>
         </div>
         <button class="btn btn-info" th:onclick="'loadResult();'">
-            <i class="btn btn-primary pull-right">submit</i>
+            <i>submit</i>
         </button>
     </form>
 </div>

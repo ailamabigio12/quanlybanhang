@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
 
@@ -38,8 +39,8 @@
 
                 <hr>
 
-                <div th:if="*{salePrice}"><h4><del style="color: red; text-decoration-color: black" th:text="*{basePrice} + 'đ'"></del></h4> <h3 th:text="*{salePrice} + 'đ'"></h3></div>
-                <div th:unless="*{salePrice}"><h3 style="color: red;" th:text="*{salePrice} + 'đ'"></h3></div>
+                <div th:if="*{salePrice}"><h4><del style="color: red; text-decoration-color: black" th:text="*{basePrice} + 'đ'"></del><h3 th:text="*{salePrice} + 'đ'"></h3></h4></div>
+                <div th:unless="*{salePrice}"><h3 th:text="*{basePrice} + 'đ'"></h3></div>
 
                 <hr>
 
@@ -171,11 +172,17 @@
 <!--    }-->
 <!--</script>-->
 
-<script type="text/javascript">
+<script type="text/javascript" sec:authorize="hasRole('ROLE_ADMIN')">
     document.getElementById("name").value="[[${#authentication.getPrincipal().getFullName()}]]";
     document.getElementById("phone").value="[[${#authentication.getPrincipal().getPhoneNumber()}]]";
     document.getElementById("email").value="[[${#authentication.getPrincipal().getEmail()}]]";
     document.getElementById("roleid").value=1;
+</script>
+<script type="text/javascript" sec:authorize="hasRole('ROLE_MANAGER')">
+    document.getElementById("name").value="[[${#authentication.getPrincipal().getFullName()}]]";
+    document.getElementById("phone").value="[[${#authentication.getPrincipal().getPhoneNumber()}]]";
+    document.getElementById("email").value="[[${#authentication.getPrincipal().getEmail()}]]";
+    document.getElementById("aaaa").value=6;
 </script>
 
 <th:block th:insert="~{web/common/script :: script}"></th:block>

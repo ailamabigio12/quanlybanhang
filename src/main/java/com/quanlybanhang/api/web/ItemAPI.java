@@ -64,7 +64,6 @@ public class ItemAPI {
     @PutMapping(value = "/san-pham")
     public String deleteItem(@RequestParam(value = "id") Long id,
                              @ModelAttribute CommentDTO commentDTO) {
-        System.out.println(commentDTO.getId());
         commentService.setCodeZero(commentDTO.getId());
         return "redirect:/san-pham?id=" + id;
     }
