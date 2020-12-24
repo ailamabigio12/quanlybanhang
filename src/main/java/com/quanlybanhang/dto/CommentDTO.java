@@ -18,12 +18,14 @@ public class CommentDTO extends AbstractDTO {
     @Size(min = 1, max = 255)
     private String name;
 
-    private String phoneNumber;
+    private Integer phoneNumber;
 
     private String email;
 
     @NotBlank
     private String content;
+
+    private Long itemId;
 
     @NotBlank
     private ItemDTO item;

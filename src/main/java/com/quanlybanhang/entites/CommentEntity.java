@@ -1,10 +1,10 @@
 package com.quanlybanhang.entites;
 
-import java.util.List;
-import java.util.Set;
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "comment")
 public class CommentEntity extends BaseEntity {
@@ -20,48 +20,12 @@ public class CommentEntity extends BaseEntity {
 	
 	@Column(name = "content", columnDefinition = "TEXT")
 	private String content;
+
+	@Column(name = "code")
+	private Integer code;
 	
 	@ManyToOne
 	@JoinColumn(name = "itemid", nullable = false)
 	private ItemEntity item;
 
-	public String getName() {
-		return name;
-	}
-
-	public Integer getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public ItemEntity getItem() {
-		return item;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setPhoneNumber(Integer phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	public void setItem(ItemEntity item) {
-		this.item = item;
-	}
 }

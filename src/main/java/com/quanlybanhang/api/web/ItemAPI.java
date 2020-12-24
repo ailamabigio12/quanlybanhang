@@ -1,16 +1,13 @@
 package com.quanlybanhang.api.web;
 
-import com.quanlybanhang.service.IBannerService;
-import com.quanlybanhang.service.ICompanyService;
-import com.quanlybanhang.service.IInfoService;
-import com.quanlybanhang.service.IItemService;
+import com.quanlybanhang.dto.CommentDTO;
+import com.quanlybanhang.service.*;
 import com.quanlybanhang.service.impl.InfoService;
 import com.quanlybanhang.service.impl.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller(value = "itemAPIOfWeb")
 public class ItemAPI {
@@ -26,6 +23,9 @@ public class ItemAPI {
 
     @Autowired
     private IBannerService bannerService;
+
+    @Autowired
+    private ICommentService commentService;
 
     @GetMapping(value = "/danh-sach-san-pham")
     public String listItem(Model model, @RequestParam(value = "companyid", required = false) Long id) {
@@ -45,6 +45,23 @@ public class ItemAPI {
         model.addAttribute("companylist", companyService.findAll());
         model.addAttribute("item", itemService.findById(id));
         model.addAttribute("info", infoService.findById(infoId));
+        model.addAttribute("comment", commentService.findAll());
         return "web/item";
+    }
+
+//    Comment in item page
+    @PostMapping(value = "/san-pham")
+    public String commentItem(@RequestParam(value = "id") Long id,
+                              @ModelAttribute CommentDTO commentDTO) {
+        commentService.save(commentDTO, id);
+        return "redirect:/san-pham?id=" + id;
+    }
+
+    @PutMapping(value = "/san-pham")
+    public String deleteItem(@RequestParam(value = "id") Long id,
+                             @ModelAttribute CommentDTO commentDTO) {
+        System.out.println(commentDTO.getId());
+        commentService.setCodeZero(commentDTO.getId());
+        return "redirect:/san-pham?id=" + id;
     }
 }
