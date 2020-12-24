@@ -28,8 +28,9 @@ public class CommentService implements ICommentService {
     private CommentConverter commentConverter;
 
     @Override
-    public List<CommentDTO> findAll() {
-        List<CommentEntity> entities = commentRepository.findAllByCode(1);
+    public List<CommentDTO> findAll(ItemDTO itemDTO) {
+        ItemEntity itemEntity = itemRepository.findOneById(itemDTO.getId());
+        List<CommentEntity> entities = commentRepository.findAllByCodeAndItem(1, itemEntity);
         List<CommentDTO> dtos = new ArrayList<>();
         for (CommentEntity entity : entities) {
             CommentDTO dto = commentConverter.toDTO(entity);

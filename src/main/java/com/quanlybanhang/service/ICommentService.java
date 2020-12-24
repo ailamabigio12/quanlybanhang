@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ICommentService {
 
-    List<CommentDTO> findAll();
+    List<CommentDTO> findAll(ItemDTO itemDTO);
 
     CommentDTO save(CommentDTO commentDTO, Long id);
 

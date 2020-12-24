@@ -42,10 +42,11 @@ public class ItemAPI {
     @GetMapping(value = "/san-pham")
     public String showItem(Model model, @RequestParam(value = "id") Long id,
                            @RequestParam(value = "infoid") Long infoId) {
+        System.out.println(itemService.findById(id));
         model.addAttribute("companylist", companyService.findAll());
         model.addAttribute("item", itemService.findById(id));
         model.addAttribute("info", infoService.findById(infoId));
-        model.addAttribute("comment", commentService.findAll());
+        model.addAttribute("comment", commentService.findAll(itemService.findById(id)));
         return "web/item";
     }
 
