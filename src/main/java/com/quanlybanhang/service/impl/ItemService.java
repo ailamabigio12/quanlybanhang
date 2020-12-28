@@ -89,7 +89,7 @@ public class ItemService implements IItemService {
     public List<ItemDTO> findAllByCompanyId(Long id) {
         List<ItemDTO> items = new ArrayList<>();
         CompanyEntity company = companyRepository.findOneById(id);
-        List<ItemEntity> entities = itemRepository.findAllByCompany(company);
+        List<ItemEntity> entities = itemRepository.findAllByCompanyAndCode(company, 1);
         for (ItemEntity item:entities) {
             ItemDTO itemDTO = itemConverter.toDTO(item);
             items.add(itemDTO);
@@ -102,5 +102,16 @@ public class ItemService implements IItemService {
         ItemEntity itemEntity = itemRepository.findOneById(id);
         itemEntity.setCode(0);
         itemRepository.save(itemEntity);
+    }
+
+    @Override
+    public List<ItemDTO> search(String keyWord) {
+        List<ItemEntity> entities = itemRepository.findByKeyWord(keyWord);
+        List<ItemDTO> dtos = new ArrayList<>();
+        for (ItemEntity entity : entities) {
+            ItemDTO dto = itemConverter.toDTO(entity);
+            dtos.add(dto);
+        }
+        return dtos;
     }
 }

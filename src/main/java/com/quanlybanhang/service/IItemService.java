@@ -18,4 +18,6 @@ public interface IItemService {
     void setCodeZero( Long id);
 
     List<ItemDTO> findAllByCompanyId(Long id);
+
+    List<ItemDTO> search(String keyWord);
 }

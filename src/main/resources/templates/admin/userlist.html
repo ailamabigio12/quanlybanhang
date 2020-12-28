@@ -90,8 +90,8 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr th:each="user : ${userlist}">
-                                                        <td th:text="${user.getUsername()}"></td>
-                                                        <td th:text="${user.getFullname()}"></td>
+                                                        <td th:text="${user.getUserName()}"></td>
+                                                        <td th:text="${user.getFullName()}"></td>
                                                         <td th:text="${user.getEmail()}"></td>
                                                         <td sec:authorize="hasRole('ROLE_MANAGER')">
                                                             <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
