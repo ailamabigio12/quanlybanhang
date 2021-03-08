@@ -42,7 +42,7 @@
                         <form th:action="@{/admin/tao-tai-khoan}" method="post" th:object="${user}">
                             <div class="form-group">
                                 <label class="control-label" for="username"> Tên tài khoản </label>
-                                <input id="username" class="form-control" th:field="*{username}"
+                                <input id="username" class="form-control" th:field="*{userName}"
                                        required autofocus="autofocus" />
                             </div>
 
@@ -59,14 +59,20 @@
                             </div>
 
                             <div class="form-group">
+                                <label class="control-label" for="phoneNumber"> Số điện thoại </label> <input
+                                    id="phoneNumber" class="form-control" th:field="*{phoneNumber}" required
+                                    autofocus="autofocus" />
+                            </div>
+
+                            <div class="form-group">
                                 <label class="control-label" for="fullname"> Họ và tên </label> <input
-                                    id="fullname" class="form-control"
-                                    th:field="*{fullname}" autofocus="autofocus" />
+                                    id="fullname" class="form-control" required
+                                    th:field="*{fullName}" autofocus="autofocus" />
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label" for="identitynumber"> Số thẻ căn cước </label> <input
-                                    id="identitynumber" class="form-control"
+                                    id="identitynumber" class="form-control" required
                                     th:field="*{identityNumber}" autofocus="autofocus" />
                             </div>
 

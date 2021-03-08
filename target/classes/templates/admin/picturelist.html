@@ -35,67 +35,71 @@
 
             <!-- Begin Page Content -->
             <div class="main-content main-container" id="main-container">
-                <form th:action="@{admin/danh-sach-quan-ly}" id="formSubmit" method="get">
+                <form th:action="@{admin/quan-ly-anh}" id="formSubmit" method="get">
 
-                    <!-- success message -->
+                    <!-- create message -->
                     <div th:if="${param.csuccess}">
-                        <div class="alert alert-info">Tạo tài khoản mới thành công</div>
+                        <div class="alert alert-info">Thêm ảnh mới thành công!</div>
                     </div>
 
-                    <!-- delete message -->
-                    <div th:if="${param.dsuccess}">
-                        <div class="alert alert-info">Xóa tài khoản thành công</div>
+                    <!-- fix message -->
+                    <div th:if="${param.fsuccess}">
+                        <div class="alert alert-info">Thay đổi ảnh thành công!</div>
                     </div>
 
                     <div class="main-content-inner">
                         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                             <ul class="breadcrumb">
-                                <li>
-                                    <i class="ace-icon fa fa-home home-icon"></i>
-                                    <a href="#">Trang chủ</a>
-                                </li>
+                                <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang chủ</a></li>
+                                <li class="active">Danh sách ảnh</li>
                             </ul>
                             <!-- /.breadcrumb -->
                         </div>
                         <div class="page-content">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="widget-box table-filter" sec:authorize="hasRole('ROLE_MANAGER')">
+                                    <div class="widget-box table-filter">
                                         <div class="table-btn-controls">
                                             <div class="pull-right tableTools-container">
                                                 <div class="dt-buttons btn-overlap btn-group">
                                                     <a flag="info"
                                                        class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" data-toggle="tooltip"
-                                                       title='Thêm tài khoản' th:href='@{/admin/tao-tai-khoan}'>
+                                                       title='Thêm bài viết' th:href='@{/admin/anh}'>
 															<span>
 																<i class="fa fa-plus-circle bigger-110 purple"></i>
 															</span>
                                                     </a>
+                                                    <button id="btnDelete" type="button" onclick="warningBeforeDelete()"
+                                                            class="dt-button buttons-html5 btn btn-white btn-primary btn-bold" data-toggle="tooltip" title='Xóa bài viết'>
+																<span>
+																	<i class="fa fa-trash-o bigger-110 pink"></i>
+																</span>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="table-responsive">
                                                 <table class="table table-bordered">
                                                     <thead>
                                                     <tr>
-                                                        <th>Tên tài khoản</th>
-                                                        <th>Họ và tên</th>
-                                                        <th>Email</th>
-                                                        <th sec:authorize="hasRole('ROLE_MANAGER')">Thao tác</th>
+                                                        <th>Tên sản phẩm</th>
+                                                        <th>Ảnh sản phẩm</th>
+                                                        <th>Thao tác</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <tr th:each="user : ${userlist}">
-                                                        <td th:text="${user.getUserName()}"></td>
-                                                        <td th:text="${user.getFullName()}"></td>
-                                                        <td th:text="${user.getEmail()}"></td>
-                                                        <td sec:authorize="hasRole('ROLE_MANAGER')">
+                                                    <tr th:each="item : ${banner}">
+                                                        <td th:text="${item.getName()}"></td>
+                                                        <td><img th:src="@{~/images/{thumb}(thumb = ${item.getUrl()})}" width=250 height="150"></td>
+                                                        <td>
                                                             <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
-                                                               title="Xóa sản phẩm" th:href='@{/admin/danh-sach-quan-ly/{id}(id = ${user.getId()})}'><i class="fa fa-recycle fa-square-o" aria-hidden="true"></i>
+                                                               title="Cập nhật ảnh" th:href='@{/admin/anh?id={id}(id = ${item.getId()})}'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
+                                                               title="Xóa ảnh" th:href='@{/admin/quan-ly-anh/{id}(id = ${item.getId()})}'><i class="fa fa-recycle fa-square-o" aria-hidden="true"></i>
                                                             </a>
                                                         </td>
                                                     </tr>

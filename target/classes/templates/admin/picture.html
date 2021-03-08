@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quốc Đạt Mobile - Trang quản lý</title>
+
+    <th:block th:insert="~{admin/common/link :: link}"></th:block>
+
+    <th:block th:insert="~{admin/common/link :: script}"></th:block>
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <div th:insert="~{admin/common/menu :: menu}"></div>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <div th:insert="~{admin/common/header :: header}"></div>
+
+            <!-- Begin Page Content -->
+            <div class="main-content main-container" id="main-container">
+                <div class="main-content-inner">
+                    <div class="breadcrumbs" id="breadcrumbs">
+                        <script type="text/javascript">
+                            try {
+                                ace.settings.check('breadcrumbs', 'fixed')
+                            } catch (e) {
+                            }
+                        </script>
+
+                        <ul th:if="${param.id}" class="breadcrumb">
+                            <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang chủ</a>
+                            </li>
+
+                            <li><a th:href="@{/admin/danh-sach-tin-tuc}">Danh sách ảnh</a></li>
+                            <li class="active">Cập nhật ảnh</li>
+                        </ul>
+                        <ul th:unless="${param.id}" class="breadcrumb">
+                            <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang chủ</a>
+                            </li>
+
+                            <li><a th:href="@{/admin/danh-sach-tin-tuc}">Danh sách ảnh</a></li>
+                            <li class="active">Thêm ảnh</li>
+                        </ul>
+                        <!-- /.breadcrumb -->
+                    </div>
+                    <div class="page-content">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <form th:if="${param.id}" th:action="@{/admin/anh?id={id}(id = ${param.id})}" th:object="${banner}" th:method="PUT" enctype="multipart/form-data">
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="title"> Tên ảnh: </label>
+                                        <input id="title" class="form-control" th:field="*{name}"
+                                               required autofocus="autofocus" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="thumbnail"> Ảnh: </label>
+                                        <input id="thumbnail" path="file" name="file" type="file"
+                                               required autofocus="autofocus" />
+                                    </div>
+
+                                    <div class="clearfix form-actions">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button class="btn btn-info" type="submit" id="btnAddOrUpdateNew">
+                                                <i class="ace-icon fa fa-check bigger-110"></i>
+                                                Cập nhật ảnh
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <form th:unless="${param.id}" th:action="@{/admin/anh}" th:object="${banner}" method="POST" enctype="multipart/form-data">
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="title"> Tên ảnh: </label>
+                                        <input id="title" class="form-control" th:field="*{name}"
+                                               required autofocus="autofocus" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="thumbnail"> Ảnh: </label>
+                                        <input id="thumbnail" path="file" name="file" type="file"
+                                               required autofocus="autofocus" />
+                                    </div>
+
+                                    <div class="clearfix form-actions">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button class="btn btn-info" type="submit" id="btnAddOrUpdateNew">
+                                                <i class="ace-icon fa fa-check bigger-110"></i>
+                                                Thêm ảnh
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <div th:insert="~{admin/common/footer :: footer}"></div>
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<div th:insert="~{admin/common/additional :: additional}"></div>
+
+<th:block th:insert="~{admin/common/script :: script}"></th:block>
+
+</body>
+
+</html>
